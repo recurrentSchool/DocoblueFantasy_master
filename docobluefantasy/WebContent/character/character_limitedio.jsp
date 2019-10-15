@@ -7,12 +7,13 @@
 <head>
 <meta charset="UTF-8">
 <title>イオ（リミテッド）詳細</title>
+<link rel="stylesheet" href="character.css">
 </head>
 <body>
 <center>
 <img src="${pageContext.request.contextPath}/image/character/limitedio.png" width="400" height="350" alt="「リミテッド」イオの画像">
 </center>
-	<table border="1" align="center">
+	<table border="1" align="center" bgcolor="#FFFFFF">
 			<tr>
 				<th>名前</th>
 				<td><%= chara.getName()%></td>

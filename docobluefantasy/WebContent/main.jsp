@@ -16,11 +16,12 @@
 </header>
 <hr>
 <div align="center">
-<table border="1">
-<tr><td bgcolor="#99CCFF" width="200" height="50"><a href="/docobluefantasy/weapon.jsp"><center>武器一覧</center></a></td></tr>
-<tr><td bgcolor="#99CCFF" width="200" height="50"><a href="/docobluefantasy/character.jsp"><center>キャラクター一覧</center></a></td></tr>
-<tr><td bgcolor="#99CCFF" width="200" height="50"><a href="/docobluefantasy/boss.jsp"><center>ボス一覧</center></a></td></tr>
-<tr><td bgcolor="#99CCFF" width="200" height="50"><a href="/docobluefantasy/gacha.jsp"><center>ガチャシミュレーション</center></a></td></tr>
+<table border="1"  width="280" height="100" bordercolor="#000000">
+<tr><th bgcolor="#FFFFFF">武器</th><th bgcolor="#FFFFFF">キャラクター</th><th bgcolor="#FFFFFF">ボス</th><th bgcolor="#FFFFFF">ガチャシュミレーター</th></tr>
+<tr><td ><a href="/docobluefantasy/weapon.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/omegasword.png"></a></td>
+<td><a href="/docobluefantasy/character.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/mizugizoi.png"></a></td>
+<td><a href="/docobluefantasy/boss.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/shiva.png"></a></td>
+<td><a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/banner_rd28bxed_1.png"></a></td></tr>
 </table>
 <hr>
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>

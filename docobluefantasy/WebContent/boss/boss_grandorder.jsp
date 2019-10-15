@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>ジ・オーダー・グランデ詳細</title>
+<link rel="stylesheet" href="boss.css">
 </head>
 <body>
 <center>

@@ -19,19 +19,18 @@
 
 <div align="center">
 	<form action="/docobluefantasy/LoginServlet" method="POST">
-		<table>
+		<table border="1">
 			<tr>
-				<th>名前</th>
+				<th bgcolor="#99CCFF">名前</th>
 				<td><input type="text" name="name" required></td>
 			</tr>
 			<tr>
-				<th>パスワード</th>
+				<th bgcolor="#99CCFF">パスワード</th>
 				<td><input type="password" name="pass" required></td>
 			</tr>
-			<tr>
-				<td><input type="submit" value="ログイン"></td>
-			</tr>
 		</table>
+		<br>
+		<input type="submit" value="ログイン">
 	</form>
 <hr>
 
