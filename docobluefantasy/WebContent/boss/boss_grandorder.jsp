@@ -13,7 +13,7 @@
 <center>
 <img src="${pageContext.request.contextPath}/image/boss/GrandOrder.png" width="400" height="350" alt="BlueSphereの画像">
 </center>
-	<table border="1" align="center">
+	<table border="1" align="center" bgcolor="#FFFFFF">
 			<tr>
 				<th>名前</th>
 				<td><%= boss.getName()%></td>

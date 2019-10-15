@@ -7,12 +7,16 @@
 <head>
 <meta charset="UTF-8">
 <title>D・ビィ詳細</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<center>
+<div align="center">
+<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150" >
+</div>
+<div align="center">
 <img src="${pageContext.request.contextPath}/image/weapon/DragonBarV.png" width="400" height="350" alt="D・ビィの画像">
-</center>
-	<table border="1" align="center">
+
+	<table border="1" align="center" bgcolor="#FFFFFF">
 		<tr>
 			<th>名前</th>
 			<td><%= weapon.getName()%></td>
@@ -26,5 +30,13 @@
 			<td><%= weapon.getSkill()%></td>
 		</tr>
 	</table>
+	<table border="1" bgcolor="#FFFFFF">
+		<tr>
+		<th><a href="/docobluefantasy/weapon.jsp"><font color="#0000CC">戻る</font></a></th>
+		</tr>
+		</table>
+	<hr>
+<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+</div>
 </body>
 </html>
