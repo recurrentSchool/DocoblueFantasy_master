@@ -4,27 +4,39 @@
 <% Weapon weapon = (Weapon)request.getAttribute("weapon"); %>
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="UTF-8">
 <title>シュヴァリエソード・マグナ詳細</title>
 </head>
+
 <body>
-<center>
+
+<div align="center">
+<h1>DOCOBLUEFANTASY攻略</h1>
+<hr>
+
+<div align="center">
 <img src="${pageContext.request.contextPath}/image/weapon/LuminieraSwordOmega.png" width="400" height="350" alt="シュヴァリエソード・マグナの画像">
-</center>
-	<table border="1" align="center">
+</div>
+	<table border="1" >
 		<tr>
 			<th>名前</th>
-			<td><%= weapon.getName()%></td>
+			<td align="center"><%= weapon.getName()%></td>
 		</tr>
 		<tr>
 			<th>攻撃力</th>
-			<td><%= weapon.getAttack()%></td>
+			<td align="center"><%= weapon.getAttack()%></td>
 		</tr>
 		<tr>
 			<th>スキル</th>
-			<td><%= weapon.getSkill()%></td>
+			<td align="center"><%= weapon.getSkill()%></td>
 		</tr>
 	</table>
+
+<hr>
+<p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
+</div>
+
 </body>
 </html>

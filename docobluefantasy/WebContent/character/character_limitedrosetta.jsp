@@ -4,39 +4,51 @@
 <% BattleCharacter chara = (BattleCharacter)request.getAttribute("battlechatacter"); %>
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="UTF-8">
 <title>ロゼッタ（リミテッド）詳細</title>
 </head>
+
 <body>
-<center>
+
+<div align="center">
+<h1>DOCOBLUEFANTASY攻略</h1>
+<hr>
+
+<div align="center">
 <img src="${pageContext.request.contextPath}/image/character/limitedrosetta.png" width="400" height="350" alt="「リミテッド」ロゼッタの画像">
-</center>
-	<table border="1" align="center">
+</div>
+	<table border="1" >
 			<tr>
 				<th>名前</th>
-				<td><%= chara.getName()%></td>
+				<td align="center"><%= chara.getName()%></td>
 			</tr>
 			<tr>
 				<th>レアリティ</th>
-				<td><%= chara.getRarity()%></td>
+				<td align="center"><%= chara.getRarity()%></td>
 			</tr>
 			<tr>
 				<th>攻撃力</th>
-				<td><%= chara.getAttack()%></td>
+				<td align="center"><%= chara.getAttack()%></td>
 			</tr>
 			<tr>
 				<th>HP</th>
-				<td><%= chara.getHp()%></td>
+				<td align="center"><%= chara.getHp()%></td>
 			</tr>
 			<tr>
 				<th>スキル</th>
-				<td><%= chara.getSkill()%></td>
+				<td align="center"><%= chara.getSkill()%></td>
 			</tr>
 			<tr>
 				<th>評価</th>
-				<td><%= chara.getEvaluation()%></td>
+				<td align="center"><%= chara.getEvaluation()%></td>
 			</tr>
 		</table>
+
+<hr>
+<p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
+</div>
+
 </body>
 </html>
