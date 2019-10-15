@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)確認ページ</title>
+<link rel="stylesheet" href="reset.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
