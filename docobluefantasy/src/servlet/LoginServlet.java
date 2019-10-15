@@ -61,6 +61,8 @@ public class LoginServlet extends HttpServlet {
 			message ="パスワードもしくは名前が違います";
 			request.setAttribute("message",message );
 
+			url = "/login.jsp";
+
 		}
 
 		RequestDispatcher dis = request.getRequestDispatcher(url);

@@ -17,6 +17,14 @@
 </div>
 </header>
 <hr>
+	<%
+		if (message != null) {
+	%>
+		<p> <%= message %> </p>
+	<%
+		}
+	%>
+
 
 <div align="center">
 	<form action="/docobluefantasy/LoginServlet" method="POST">
