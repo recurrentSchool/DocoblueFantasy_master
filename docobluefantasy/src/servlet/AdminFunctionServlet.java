@@ -31,7 +31,7 @@ public class AdminFunctionServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		String message = (String) request.getAttribute("message");
-		String sessionStatus = (String) request.getAttribute("status");
+		String sessionStatus = (String) request.getParameter("status");
 		String url = null;
 
 		//メッセージをセット
