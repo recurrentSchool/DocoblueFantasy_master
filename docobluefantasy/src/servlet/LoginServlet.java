@@ -53,7 +53,7 @@ public class LoginServlet extends HttpServlet {
 
 
 			message ="パスワードもしくは名前が違います";
-			session.setAttribute("message",message );
+			request.setAttribute("message",message );
 
 			RequestDispatcher dis = request.getRequestDispatcher("/message.jsp");
 			dis.forward(request, response);

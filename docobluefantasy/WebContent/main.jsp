@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)メインページ</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,6 +24,11 @@
 <tr><td bgcolor="#99CCFF" width="200" height="50"><a href="/docobluefantasy/gacha.jsp"><center>ガチャシミュレーション</center></a></td></tr>
 </table>
 <hr>
+<div align="right">
+<form action="/docobluefantasyTANO/ContentsServlet" method="post">
+<input class="submit_button" type="submit" value="ログアウト">
+</form>
+</div>
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
 <hr>
