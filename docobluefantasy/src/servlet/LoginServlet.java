@@ -47,18 +47,21 @@ public class LoginServlet extends HttpServlet {
 
 			session.setAttribute("user",user );
 
-			RequestDispatcher dis = request.getRequestDispatcher("/main.jsp");
-			dis.forward(request, response);
+			if(user.getAdmin() == 0) {
+
+				url = "/WEB-INF/admin.jsp";
+
+			} else if (user.getAdmin() == 1) {
+
+				url = "/main.jsp";
+
 		}
 		else {
 
 
 			message ="パスワードもしくは名前が違います";
 			request.setAttribute("message",message );
-
-			RequestDispatcher dis = request.getRequestDispatcher("/message.jsp");
-			dis.forward(request, response);
-
+			url = "/login.jsp";
 		}
 
 	}//doPOST
