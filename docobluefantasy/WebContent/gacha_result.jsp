@@ -72,8 +72,8 @@
 </tr>
 </table>
 <center>
-<p><a href="/docobluefantasyTANO/gacha.jsp">もう一度引く</a></p><br>
-<p><a href="/docobluefantasyTANO/main.jsp">メインページに戻る</a></p>
+<p><a href="/docobluefantasy/gacha.jsp">もう一度引く</a></p><br>
+<p><a href="/docobluefantasy/main.jsp">メインページに戻る</a></p>
 </center>
 </body>
 </html>
