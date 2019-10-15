@@ -30,6 +30,7 @@ public class LoginServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String pass = request.getParameter("pass");
 		String message = " ";
+		String url = null;
 
 		User user = new User(name, pass);
 

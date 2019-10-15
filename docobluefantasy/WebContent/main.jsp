@@ -6,7 +6,8 @@
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)メインページ</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
+<link rel="stylesheet" href="/docobluefantasy/css/style.css">
 </head>
 <body>
 
@@ -25,7 +26,7 @@
 </table>
 <hr>
 <div align="right">
-<form action="/docobluefantasyTANO/ContentsServlet" method="post">
+<form action="/docobluefantasy/ContentsServlet" method="post">
 <input class="submit_button" type="submit" value="ログアウト">
 </form>
 </div>
