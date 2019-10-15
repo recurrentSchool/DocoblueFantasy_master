@@ -7,7 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)結果表示画面ページ</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
+<link rel="stylesheet" href="/docobluefantasy/css/style.css">
 </head>
 <body>
 <header>

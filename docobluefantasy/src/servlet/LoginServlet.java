@@ -29,36 +29,42 @@ public class LoginServlet extends HttpServlet {
 
 		String name = request.getParameter("name");
 		String pass = request.getParameter("pass");
-		String message = " ";
+		String message = "";
+		String url = null;
 
 		User user = new User(name, pass);
 
 		HttpSession session = request.getSession();
+
 		session.setAttribute("message",message );
 
 		LoginLogic bo = new LoginLogic();
 
 		boolean result = bo.executeLogin(user);
 
-
-
 		if (result == true) {
 
 			session.setAttribute("user",user );
 
-			RequestDispatcher dis = request.getRequestDispatcher("/main.jsp");
-			dis.forward(request, response);
-		}
-		else {
+			if(user.getAdmin() == 0) {
 
+				url = "/WEB-INF/admin.jsp";
+
+			} else if (user.getAdmin() == 1) {
+
+				url = "/main.jsp";
+
+			}
+
+		} else {
 
 			message ="パスワードもしくは名前が違います";
-			session.setAttribute("message",message );
-
-			RequestDispatcher dis = request.getRequestDispatcher("/message.jsp");
-			dis.forward(request, response);
+			request.setAttribute("message",message );
 
 		}
+
+		RequestDispatcher dis = request.getRequestDispatcher(url);
+		dis.forward(request, response);
 
 	}//doPOST
 

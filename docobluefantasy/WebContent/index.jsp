@@ -5,7 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>docowith.jp</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
+<link rel="stylesheet" href="/docobluefantasy/css/style.css">
 </head>
 <body>
 <header>
