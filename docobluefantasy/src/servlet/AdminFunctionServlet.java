@@ -50,7 +50,7 @@ public class AdminFunctionServlet extends HttpServlet {
 
 		}
 
-		//admin.jspへフォワード
+		//トップページもしくは管理画面へフォワード
 		RequestDispatcher dis = request.getRequestDispatcher(url);
 		dis.forward(request, response);
 

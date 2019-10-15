@@ -40,6 +40,7 @@ public class LoginServlet extends HttpServlet {
 
 		boolean result = bo.executeLogin(user);
 
+		//ログイン認証が済んだ時、管理画面とメイン画面に遷移先を選ぶ
 		if (result == true) {
 
 			session.setAttribute("user", user);
@@ -59,6 +60,7 @@ public class LoginServlet extends HttpServlet {
 			message = "パスワードもしくは名前が違います";
 			request.setAttribute("message", message);
 			url = "/login.jsp";
+
 		}
 
 		RequestDispatcher dis = request.getRequestDispatcher(url);

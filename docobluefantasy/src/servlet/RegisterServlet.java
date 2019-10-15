@@ -59,7 +59,8 @@ public class RegisterServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String pass = request.getParameter("pass");
 		int billing =Integer.parseInt(request.getParameter("billing"));
-		String message = " ";
+		String message = "";
+		String url = "";
 
 		System.out.println(admin);
 		System.out.println(name);
@@ -77,17 +78,20 @@ public class RegisterServlet extends HttpServlet {
 
 		if (result == true) {
 
-			RequestDispatcher dis = request.getRequestDispatcher("/confimation.jsp");
-			dis.forward(request, response);
+			url = "/confimation.jsp";
+
 		}
 
 		else {
 
 			message = "この名前は既に使われています";
 			request.setAttribute("message",message );
-			RequestDispatcher dis = request.getRequestDispatcher("/registar.jsp");
-			dis.forward(request, response);
+			url = "/registar.jsp";
+
 		}
+
+		RequestDispatcher dis = request.getRequestDispatcher(url);
+		dis.forward(request, response);
 
 	}
 

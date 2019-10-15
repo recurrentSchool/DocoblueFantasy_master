@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)キャラクターページ</title>
-<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 </head>
 <body>
 
@@ -36,6 +36,14 @@
 					<td width="230" height="230"><div align="center"><p>イオ(リミテッド)</p> <hr><a href="/docobluefantasy/ContentsServlet?characterName=limitedIo"><input type="image" src="${pageContext.request.contextPath}/image/character/limitedio.png" width="180" height="150"></a></div></td>
 					<td width="230" height="230"><div align="center"><p>ランスロット</p> <hr><a href="/docobluefantasy/ContentsServlet?characterName=lancelot"><input type="image" src="${pageContext.request.contextPath}/image/character/lancelot.png" width="180" height="150"></a></div></td>
 </tr>
+		</table>
+		</div>
+	<br>
+		<div align="center">
+		<table border="1" bgcolor="#FFFFFF">
+		<tr>
+		<th><a href="/docobluefantasy/main.jsp"><font color="#0000CC">戻る</font></a></th>
+		</tr>
 		</table>
 		</div>
 

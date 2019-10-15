@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)ボスページ</title>
-<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 </head>
 <body>
 
@@ -38,8 +38,6 @@
 		</table>
 		</div>
 
-<hr>
-<p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
 </div>
 		<br>
 		<div align="center">

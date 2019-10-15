@@ -8,7 +8,8 @@
 <head>
 <meta charset="UTF-8">
 <title>パーシヴァル詳細</title>
-<link rel="stylesheet" href="character.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/character.css">
 </head>
 
 <body>
