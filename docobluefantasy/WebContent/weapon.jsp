@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)武器ページ</title>
+<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
 </head>
 <body>
 
@@ -15,6 +16,9 @@
 <header>
 <div align="center">
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
+
+<hr>
+
 </div>
 </header>
 <div align="center"><h2>武器一覧</h2></div>
@@ -33,9 +37,19 @@
 		</table>
 		</div>
 
+<br>
+		<div align="center">
+		<table border="1" bgcolor="#FFFFFF">
+		<tr>
+		<th><a href="/docobluefantasy/main.jsp"><font color="#0000CC">戻る</font></a></th>
+		</tr>
+		</table>
+
+		</div>
+
 
 <hr>
-<p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
+	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
 
 </body>

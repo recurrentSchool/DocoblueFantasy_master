@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>ガチャ画面</title>
+<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
 </head>
 <body>
 <div align="center">

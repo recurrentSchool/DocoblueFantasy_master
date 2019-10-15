@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>アルティメットバハムート詳細</title>
+<link rel="stylesheet" href="boss.css">
 </head>
 
 <body>

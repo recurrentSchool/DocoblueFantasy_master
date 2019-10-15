@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)キャラクターページ</title>
+<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
 </head>
 <body>
 
@@ -39,7 +40,7 @@
 		</div>
 
 <hr>
-	<p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
+	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
 
 </body>

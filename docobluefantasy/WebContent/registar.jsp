@@ -7,7 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)会員登録ページ</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
+<link rel="stylesheet" href="/docobluefantasy/css/style.css">
 
 
 <script>

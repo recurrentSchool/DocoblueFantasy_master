@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>ナルメア詳細</title>
+<link rel="stylesheet" href="character.css">
 </head>
 
 <body>

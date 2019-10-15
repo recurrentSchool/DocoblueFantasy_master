@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>オイゲン詳細</title>
+<link rel="stylesheet" href="character.css">
 </head>
 
 <body>
