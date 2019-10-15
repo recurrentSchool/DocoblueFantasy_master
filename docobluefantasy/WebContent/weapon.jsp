@@ -7,6 +7,11 @@
 <title>DOCOBLE FANTASY(仮)武器ページ</title>
 </head>
 <body>
+
+<div align="center">
+<h1>DOCOBLUEFANTASY攻略</h1>
+<hr>
+
 <header>
 <center>
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
@@ -16,14 +21,20 @@
 		<center>
 		<table border="1">
 				<tr>
-					<td width="230" height="230"><center><p>ブルースフィア</p> <hr><a href="/docobluefantasy/ContentsServlet?weaponName=blueSphere"><input type="image" src="${pageContext.request.contextPath}/image/weapon/BlueSphere.png" width="180" height="150"></a></center></td>
-					<td width="230" height="230"><center><p>D.ビィ</p> <hr><a href="/docobluefantasy/ContentsServlet?weaponName=dragonBarV"><input type="image" src="${pageContext.request.contextPath}/image/weapon/DragonBarV.png" width="180" height="150"></a></center></td>
-					<td width="230" height="230"><center><p>イクサバ</p> <hr><a href="/docobluefantasy/ContentsServlet?weaponName=Ixaba"><input type="image" src="${pageContext.request.contextPath}/image/weapon/Ixaba.png" width="180" height="150"></a></center></td>
+					<td width="230" height="230"><center><p>ブルースフィア</p> <hr><a href="/docobluefantasy/ContentsServlet?weaponName=bluesphere"><input type="image" src="${pageContext.request.contextPath}/image/weapon/BlueSphere.png" width="180" height="150"></a></center></td>
+					<td width="230" height="230"><center><p>D.ビィ</p> <hr><a href="/docobluefantasy/ContentsServlet?weaponName=dragonbarv"><input type="image" src="${pageContext.request.contextPath}/image/weapon/DragonBarV.png" width="180" height="150"></a></center></td>
+					<td width="230" height="230"><center><p>イクサバ</p> <hr><a href="/docobluefantasy/ContentsServlet?weaponName=ixaba"><input type="image" src="${pageContext.request.contextPath}/image/weapon/Ixaba.png" width="180" height="150"></a></center></td>
 </tr>
-					<td width="230" height="230"><center><p>エターナル・ラヴ</p> <hr><a href="/docobluefantasy/ContentsServlet?weaponName=loveEternal"><input type="image" src="${pageContext.request.contextPath}/image/weapon/LoveEternal.png" width="180" height="150"></a></center></td>
-					<td width="230" height="230"><center><p>シュバリエソード・マグナ</p> <hr><a href="/docobluefantasy/ContentsServlet?weaponName=luminieraSwordOmega"><input type="image" src="${pageContext.request.contextPath}/image/weapon/LuminieraSwordOmega.png" width="180" height="150"></a></center></td>
-					<td width="230" height="230"><center><p>ニーベルン・ホルン</p> <hr><a href="/docobluefantasy/ContentsServlet?weaponName=nibelnHorn"><input type="image" src="${pageContext.request.contextPath}/image/weapon/NibelungHorn.png" width="180" height="150"></a></center></td>
+					<td width="230" height="230"><center><p>エターナル・ラヴ</p> <hr><a href="/docobluefantasy/ContentsServlet?weaponName=loveeternal"><input type="image" src="${pageContext.request.contextPath}/image/weapon/LoveEternal.png" width="180" height="150"></a></center></td>
+					<td width="230" height="230"><center><p>シュバリエソード・マグナ</p> <hr><a href="/docobluefantasy/ContentsServlet?weaponName=luminieralsordomega"><input type="image" src="${pageContext.request.contextPath}/image/weapon/LuminieraSwordOmega.png" width="180" height="150"></a></center></td>
+					<td width="230" height="230"><center><p>ニーベルン・ホルン</p> <hr><a href="/docobluefantasy/ContentsServlet?weaponName=nibelunghorn"><input type="image" src="${pageContext.request.contextPath}/image/weapon/NibelungHorn.png" width="180" height="150"></a></center></td>
 		</table>
 		</center>
+
+
+<hr>
+	<p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
+</div>
+
 </body>
 </html>

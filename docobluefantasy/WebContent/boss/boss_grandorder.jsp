@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="bean.Boss"%>
+<% Boss boss = (Boss)request.getAttribute("boss"); %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>GrandOrder詳細</title>
+<title>ジ・オーダー・グランデ詳細</title>
 </head>
 <body>
 <center>
@@ -13,19 +15,19 @@
 	<table border="1" align="center">
 			<tr>
 				<th>名前</th>
-				<td></td>
+				<td><%= boss.getName()%></td>
 			</tr>
 			<tr>
 				<th>攻撃力</th>
-				<td></td>
+				<td><%= boss.getAttack()%></td>
 			</tr>
 			<tr>
 				<th>HP</th>
-				<td></td>
+				<td><%= boss.getHp()%></td>
 			</tr>
 			<tr>
 				<th>特殊攻撃</th>
-				<td></td>
+				<td><%= boss.getSpecialAttack()%></td>
 			</tr>
 		</table>
 </body>

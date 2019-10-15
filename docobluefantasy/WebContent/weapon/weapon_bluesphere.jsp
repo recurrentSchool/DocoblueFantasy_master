@@ -1,27 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="bean.Weapon"%>
+<% Weapon weapon = (Weapon)request.getAttribute("weapon"); %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>BlueSphere詳細</title>
+<title>ブルースフィア詳細</title>
 </head>
 <body>
 <center>
-<img src="${pageContext.request.contextPath}/image/weapon/BlueSphere.png" width="400" height="350" alt="BlueSphereの画像">
+<img src="${pageContext.request.contextPath}/image/weapon/BlueSphere.png" width="400" height="350" alt="ブルースフィアの画像">
 </center>
 	<table border="1" align="center">
 		<tr>
 			<th>名前</th>
-			<td></td>
+			<td><%= weapon.getName()%></td>
 		</tr>
 		<tr>
 			<th>攻撃力</th>
-			<td></td>
+			<td><%= weapon.getAttack()%></td>
 		</tr>
 		<tr>
 			<th>スキル</th>
-			<td></td>
+			<td><%= weapon.getSkill()%></td>
 		</tr>
 	</table>
 </body>

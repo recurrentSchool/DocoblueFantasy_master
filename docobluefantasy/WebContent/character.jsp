@@ -7,6 +7,11 @@
 <title>DOCOBLE FANTASY(仮)キャラクターページ</title>
 </head>
 <body>
+
+<div align="center">
+<h1>DOCOBLUEFANTASY攻略</h1>
+<hr>
+
 <header>
 <center>
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
@@ -30,6 +35,10 @@
 					<td width="230" height="230"><center><p>ランスロット</p> <hr><a href="/docobluefantasy/ContentsServlet?characterName=lancelot"><input type="image" src="${pageContext.request.contextPath}/image/character/lancelot.png" width="180" height="150"></a></center></td>
 		</table>
 		</center>
+
+<hr>
+	<p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
+</div>
 
 </body>
 </html>

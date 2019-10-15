@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="bean.BattleCharacter"%>
+<% BattleCharacter chara = (BattleCharacter)request.getAttribute("battlechatacter"); %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>「リミテッド」イオ詳細</title>
+<title>イオ（リミテッド）詳細</title>
 </head>
 <body>
 <center>
@@ -13,27 +15,27 @@
 	<table border="1" align="center">
 			<tr>
 				<th>名前</th>
-				<td></td>
+				<td><%= chara.getName()%></td>
 			</tr>
 			<tr>
 				<th>レアリティ</th>
-				<td></td>
+				<td><%= chara.getRarity()%></td>
 			</tr>
 			<tr>
 				<th>攻撃力</th>
-				<td></td>
+				<td><%= chara.getAttack()%></td>
 			</tr>
 			<tr>
 				<th>HP</th>
-				<td></td>
+				<td><%= chara.getHp()%></td>
 			</tr>
 			<tr>
 				<th>スキル</th>
-				<td></td>
+				<td><%= chara.getSkill()%></td>
 			</tr>
 			<tr>
 				<th>評価</th>
-				<td></td>
+				<td><%= chara.getEvaluation()%></td>
 			</tr>
 		</table>
 </body>
