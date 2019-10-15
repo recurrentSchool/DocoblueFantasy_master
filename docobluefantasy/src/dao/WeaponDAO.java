@@ -30,11 +30,14 @@ public class WeaponDAO {
 
 			conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
 
+			conn.setAutoCommit(false);
+
 			String sql = "INSERT INTO WEAPON (NAME,ATTACK,SKILL) VALUES (?,?,?)";
 			pStmt = conn.prepareStatement(sql);
 			pStmt.setString(1, weapon.getName());
 			pStmt.setInt(2, weapon.getAttack());
 			pStmt.setString(3, weapon.getSkill());
+
 
 			int propriety = pStmt.executeUpdate();
 
@@ -56,6 +59,13 @@ public class WeaponDAO {
 
 			//closeする
 		} finally {
+
+			try {
+				conn.commit();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+
 			if (rs != null) {
 				try {
 
@@ -231,6 +241,8 @@ public class WeaponDAO {
 
 			conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
 
+			conn.setAutoCommit(false);
+
 			String sql = "DELETE FROM WEAPON WHERE NAME = ?";
 			pStmt = conn.prepareStatement(sql);
 			pStmt.setString(1, weapon.getName());
@@ -255,6 +267,13 @@ public class WeaponDAO {
 
 			//closeする
 		} finally {
+
+			try {
+				conn.commit();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+
 			if (rs != null) {
 				try {
 
@@ -297,6 +316,8 @@ public class WeaponDAO {
 
 			conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
 
+			conn.setAutoCommit(false);
+
 			StringBuilder sqlWrite = new StringBuilder();
 
 			sqlWrite.append("UPDATE WEAPON ");
@@ -333,6 +354,13 @@ public class WeaponDAO {
 
 			//closeする
 		} finally {
+
+			try {
+				conn.commit();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+
 			if (rs != null) {
 				try {
 

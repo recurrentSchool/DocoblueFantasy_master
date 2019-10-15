@@ -5,9 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)武器ページ</title>
-
-<link rel="stylesheet" href="style.css">
-
+<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
 </head>
 <body>
 

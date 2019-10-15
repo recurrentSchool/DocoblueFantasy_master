@@ -7,8 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)ログインページ</title>
-<link rel="stylesheet" href="reset.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
+<link rel="stylesheet" href="/docobluefantasy/css/style.css">
 </head>
 <body>
 <header>
@@ -17,6 +17,14 @@
 </div>
 </header>
 <hr>
+	<%
+		if (message != null) {
+	%>
+		<p> <%= message %> </p>
+	<%
+		}
+	%>
+
 
 <div align="center">
 	<form action="/docobluefantasy/LoginServlet" method="POST">

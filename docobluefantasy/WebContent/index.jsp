@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>docowith.jp</title>
-<link rel="stylesheet" href="reset.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
 <header>

@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>情報削除画面</title>
+<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
 </head>
 <body>
 <div align="center">
@@ -46,6 +47,4 @@
 <p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
 </div>
 </body>
-
-
 </html>

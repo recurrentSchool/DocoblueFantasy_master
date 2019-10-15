@@ -7,6 +7,7 @@
 
 <meta charset="UTF-8">
 <title>情報登録画面</title>
+<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
 </head>
 
 <body>

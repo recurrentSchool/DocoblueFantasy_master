@@ -31,14 +31,27 @@ public class AdminFunctionServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		String message = (String) request.getAttribute("message");
+		String sessionStatus = (String) request.getParameter("status");
+		String url = null;
 
 		//メッセージをセット
 		request.setAttribute("message", message);
 
+		if(sessionStatus != null && sessionStatus.equals("logout")) {
+
+			HttpSession session = request.getSession();
+			session.invalidate();
+
+			url = "/index.jsp";
+
+		} else {
+
+			url = "/WEB-INF/admin.jsp";
+
+		}
+
 		//admin.jspへフォワード
-		//RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/admin.jsp");
-		//テスト用フォルダ実装
-		RequestDispatcher dis = request.getRequestDispatcher("test/admin.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher(url);
 		dis.forward(request, response);
 
 	}
@@ -49,11 +62,40 @@ public class AdminFunctionServlet extends HttpServlet {
 
 		HttpSession session = request.getSession();
 
+		String adminPage = (String) request.getParameter("adminPage");
 		String functionPage = (String) request.getParameter("functionPage");
 		String pageMove = (String) request.getParameter("pageMove");
 
-		//フォワード用のurlとメッセージの初期化
 		String url = null;
+
+		//ページ遷移
+		if (adminPage != null && !adminPage.isEmpty()) {
+
+			if (adminPage.equals("情報登録")) {
+
+				url = "/WEB-INF/entry.jsp";
+
+			} else if (adminPage.equals("情報削除")) {
+
+				url = "/WEB-INF/delete.jsp";
+
+			} else if (adminPage.equals("情報更新")) {
+
+				url = "/WEB-INF/update.jsp";
+
+			} else {
+
+				url = "/WEB-INF/admin.jsp";
+
+			}
+
+			//各ページへフォワード
+			RequestDispatcher dis = request.getRequestDispatcher(url);
+			dis.forward(request, response);
+
+		}
+
+		//メッセージの初期化
 		String message = null;
 
 		session.setAttribute("functionPage", functionPage);
@@ -113,71 +155,71 @@ public class AdminFunctionServlet extends HttpServlet {
 
 				}
 
-				url = "test/confirmation_entry.jsp";
+				url = "/WEB-INF/confirmation_entry.jsp";
 
-			//削除時確認画面表示用処理
+				//削除時確認画面表示用処理
 			} else if (functionPage.equals("delete")) {
 
 				String contentsSelect = (String) request.getParameter("contentsSelect");
 				String deleteName = (String) request.getParameter("deleteName");
 
-				if(contentsSelect.equals("weapon"))  {
+				if (contentsSelect.equals("weapon")) {
 
 					ContentsWeaponSelectLogic cwsl = new ContentsWeaponSelectLogic();
 
 					Weapon weapon = cwsl.executeSelect(deleteName);
 
-					if(weapon != null) {
+					if (weapon != null) {
 
 						request.setAttribute("weapon", weapon);
-						url = "test/confirmation_delete.jsp";
+						url = "/WEB-INF/confirmation_delete.jsp";
 
 					} else {
 
 						message = "該当する武器はありません";
-						url = "test/delete.jsp";
+						url = "/WEB-INF/delete.jsp";
 
 					}
 
-				} else if(contentsSelect.equals("character")) {
+				} else if (contentsSelect.equals("character")) {
 
 					ContentsCharacterSelectLogic ccsl = new ContentsCharacterSelectLogic();
 
 					BattleCharacter character = ccsl.executeSelect(deleteName);
 
-					if(character != null) {
+					if (character != null) {
 
 						request.setAttribute("character", character);
-						url = "test/confirmation_delete.jsp";
+						url = "/WEB-INF/confirmation_delete.jsp";
 
 					} else {
 
 						message = "該当するキャラクターはいません";
-						url = "test/delete.jsp";
+						url = "/WEB-INF/delete.jsp";
 
 					}
 
-				} else if(contentsSelect.equals("boss")) {
+				} else if (contentsSelect.equals("boss")) {
 
 					ContentsBossSelectLogic cbsl = new ContentsBossSelectLogic();
 
 					Boss boss = cbsl.executeSelect(deleteName);
 
-					if(boss != null) {
+					if (boss != null) {
 
 						request.setAttribute("boss", boss);
-						url = "test/confirmation_delete.jsp";
+						url = "/WEB-INF/confirmation_delete.jsp";
 
 					} else {
 
 						message = "該当する武器はありません";
-						url = "test/delete.jsp";
+						url = "/WEB-INF/delete.jsp";
 
 					}
 
 				}
 
-			//上書き時確認画面表示用処理
+				//上書き時確認画面表示用処理
 			} else if (functionPage.equals("update")) {
 
 				String weaponOriginalName = (String) request.getParameter("weaponOriginalName");
@@ -193,20 +235,20 @@ public class AdminFunctionServlet extends HttpServlet {
 					int weaponAttackInteger = Integer.parseInt(weaponAttack);
 					Weapon weaponUpdate = new Weapon(weaponName, weaponAttackInteger, weaponSkill);
 
-					if(weaponOriginal != null) {
+					if (weaponOriginal != null) {
 
 						request.setAttribute("weaponOriginal", weaponOriginal);
 						request.setAttribute("weaponUpdate", weaponUpdate);
-						url = "test/confirmation_update.jsp";
+						url = "/WEB-INF/confirmation_update.jsp";
 
 					} else {
 
 						message = "該当する武器が見つかりませんでした";
-						url = "test/update.jsp";
+						url = "/WEB-INF/update.jsp";
 
 					}
 
-				//キャラクターが上書き対象にある時
+					//キャラクターが上書き対象にある時
 				} else if (!characterOriginalName.isEmpty()) {
 
 					ContentsCharacterSelectLogic ccsl = new ContentsCharacterSelectLogic();
@@ -220,20 +262,20 @@ public class AdminFunctionServlet extends HttpServlet {
 							characterAttackInteger, characterHpInteger,
 							characterSkill, characterEvaluationInteger);
 
-					if(characterOriginal != null) {
+					if (characterOriginal != null) {
 
 						request.setAttribute("characterOriginal", characterOriginal);
 						request.setAttribute("characterUpdate", characterUpdate);
-						url = "test/confirmation_update.jsp";
+						url = "/WEB-INF/confirmation_update.jsp";
 
 					} else {
 
 						message = "該当するキャラクターが見つかりませんでした";
-						url = "test/update.jsp";
+						url = "/WEB-INF/update.jsp";
 
 					}
 
-				//ボスが上書き対象にある時
+					//ボスが上書き対象にある時
 				} else if (!bossOriginalName.isEmpty()) {
 
 					ContentsBossSelectLogic cbsl = new ContentsBossSelectLogic();
@@ -244,16 +286,16 @@ public class AdminFunctionServlet extends HttpServlet {
 
 					Boss bossUpdate = new Boss(bossName, bossAttackInteger, bossHpInteger, bossSpecialAttack);
 
-					if(bossOriginal != null) {
+					if (bossOriginal != null) {
 
 						request.setAttribute("bossOriginal", bossOriginal);
 						request.setAttribute("bossUpdate", bossUpdate);
-						url = "test/confirmation_update.jsp";
+						url = "/WEB-INF/confirmation_update.jsp";
 
 					} else {
 
 						message = "該当するボスが見つかりませんでした";
-						url = "test/update.jsp";
+						url = "/WEB-INF/update.jsp";
 
 					}
 
@@ -268,7 +310,7 @@ public class AdminFunctionServlet extends HttpServlet {
 			RequestDispatcher dis = request.getRequestDispatcher(url);
 			dis.forward(request, response);
 
-		//各機能の実行
+			//各機能の実行
 		} else if (pageMove.equals("executeFunction")) {
 
 			//登録機能
@@ -285,17 +327,17 @@ public class AdminFunctionServlet extends HttpServlet {
 
 					int weaponAttackInteger = Integer.parseInt(weaponAttack);
 
-					Weapon weapon = new Weapon(weaponName,weaponAttackInteger,weaponSkill);
+					Weapon weapon = new Weapon(weaponName, weaponAttackInteger, weaponSkill);
 
 					//DBへ登録
 					AdminWeaponDateLogic awdl = new AdminWeaponDateLogic();
-					if(awdl.executeInsert(weapon)) {
+					if (awdl.executeInsert(weapon)) {
 						message = "登録が完了しました";
 					} else {
 						message = "登録が失敗しました";
 					}
 
-				//キャラクター情報の登録
+					//キャラクター情報の登録
 				} else if (characterName != null && !characterName.isEmpty()) {
 					String characterRarity = (String) request.getParameter("characterRarity");
 					String characterAttack = (String) request.getParameter("characterAttack");
@@ -313,13 +355,13 @@ public class AdminFunctionServlet extends HttpServlet {
 
 					//DBへ登録
 					AdminCharacterDateLogic acdl = new AdminCharacterDateLogic();
-					if(acdl.executeInsert(character)) {
+					if (acdl.executeInsert(character)) {
 						message = "登録が完了しました";
 					} else {
 						message = "登録が失敗しました";
 					}
 
-				//ボス情報の登録
+					//ボス情報の登録
 				} else if (bossName != null && !bossName.isEmpty()) {
 					String bossAttack = (String) request.getParameter("bossAttack");
 					String bossHp = (String) request.getParameter("bossHp");
@@ -332,7 +374,7 @@ public class AdminFunctionServlet extends HttpServlet {
 
 					//DBへ登録
 					AdminBossDateLogic abdl = new AdminBossDateLogic();
-					if(abdl.executeInsert(boss)) {
+					if (abdl.executeInsert(boss)) {
 						message = "登録が完了しました";
 					} else {
 						message = "登録が失敗しました";
@@ -340,7 +382,7 @@ public class AdminFunctionServlet extends HttpServlet {
 
 				}
 
-			//削除機能
+				//削除機能
 			} else if (functionPage.equals("delete")) {
 
 				String weaponName = (String) request.getParameter("weaponName");
@@ -351,14 +393,14 @@ public class AdminFunctionServlet extends HttpServlet {
 				boolean deletePropriety = false;
 
 				//武器情報の削除
-				if(weaponName != null && !weaponName.isEmpty()) {
+				if (weaponName != null && !weaponName.isEmpty()) {
 
 					Weapon weapon = new Weapon(weaponName, 0, null);
 
 					AdminWeaponDateLogic awdl = new AdminWeaponDateLogic();
 					deletePropriety = awdl.executeDelete(weapon);
 
-					if(deletePropriety == true) {
+					if (deletePropriety == true) {
 
 						message = "削除が完了しました";
 
@@ -367,7 +409,7 @@ public class AdminFunctionServlet extends HttpServlet {
 						message = "削除に失敗しました";
 
 					}
-				//キャラクター情報の削除
+					//キャラクター情報の削除
 				} else if (characterName != null && !characterName.isEmpty()) {
 
 					BattleCharacter character = new BattleCharacter(characterName, null, 0, 0, null, 0);
@@ -375,7 +417,7 @@ public class AdminFunctionServlet extends HttpServlet {
 					AdminCharacterDateLogic acdl = new AdminCharacterDateLogic();
 					deletePropriety = acdl.executeDelete(character);
 
-					if(deletePropriety == true) {
+					if (deletePropriety == true) {
 
 						message = "削除が完了しました";
 
@@ -384,7 +426,7 @@ public class AdminFunctionServlet extends HttpServlet {
 						message = "削除に失敗しました";
 
 					}
-				//ボス情報の削除
+					//ボス情報の削除
 				} else if (bossName != null && !bossName.isEmpty()) {
 
 					Boss boss = new Boss(bossName, 0, 0, null);
@@ -392,7 +434,7 @@ public class AdminFunctionServlet extends HttpServlet {
 					AdminBossDateLogic abdl = new AdminBossDateLogic();
 					deletePropriety = abdl.executeDelete(boss);
 
-					if(deletePropriety == true) {
+					if (deletePropriety == true) {
 
 						message = "削除が完了しました";
 
@@ -414,7 +456,7 @@ public class AdminFunctionServlet extends HttpServlet {
 				boolean updatePropriety = false;
 
 				//武器情報の更新
-				if(weaponOriginalName != null && !weaponOriginalName.isEmpty()) {
+				if (weaponOriginalName != null && !weaponOriginalName.isEmpty()) {
 
 					Weapon weaponOriginal = new Weapon(weaponOriginalName, 0, null);
 
@@ -429,7 +471,7 @@ public class AdminFunctionServlet extends HttpServlet {
 					AdminWeaponDateLogic awdl = new AdminWeaponDateLogic();
 					updatePropriety = awdl.executeUpdate(weaponOriginal, weaponUpdate);
 
-					if(updatePropriety == true) {
+					if (updatePropriety == true) {
 
 						message = "更新が完了しました";
 
@@ -439,7 +481,7 @@ public class AdminFunctionServlet extends HttpServlet {
 
 					}
 
-				//キャラクター情報の更新
+					//キャラクター情報の更新
 				} else if (characterOriginalName != null && !characterOriginalName.isEmpty()) {
 
 					BattleCharacter characterOriginal = new BattleCharacter(characterOriginalName, null, 0, 0, null, 0);
@@ -456,12 +498,13 @@ public class AdminFunctionServlet extends HttpServlet {
 					int characterUpdateEvaluationInteger = Integer.parseInt(characterUpdateEvaluation);
 
 					BattleCharacter characterUpdate = new BattleCharacter(characterUpdateName, characterUpdateRarity,
-							characterUpdateAttackInteger, characterUpdateHpInteger, characterUpdateSkill, characterUpdateEvaluationInteger);
+							characterUpdateAttackInteger, characterUpdateHpInteger, characterUpdateSkill,
+							characterUpdateEvaluationInteger);
 
 					AdminCharacterDateLogic acdl = new AdminCharacterDateLogic();
 					updatePropriety = acdl.executeUpdate(characterOriginal, characterUpdate);
 
-					if(updatePropriety == true) {
+					if (updatePropriety == true) {
 
 						message = "更新が完了しました";
 
@@ -471,7 +514,7 @@ public class AdminFunctionServlet extends HttpServlet {
 
 					}
 
-				//ボス情報の更新
+					//ボス情報の更新
 				} else if (bossOriginalName != null && !bossOriginalName.isEmpty()) {
 
 					Boss bossOriginal = new Boss(bossOriginalName, 0, 0, null);
@@ -484,12 +527,13 @@ public class AdminFunctionServlet extends HttpServlet {
 					int bossUpdateAttackInteger = Integer.parseInt(bossUpdateAttack);
 					int bossUpdateHpInteger = Integer.parseInt(bossUpdateHp);
 
-					Boss bossUpdate = new Boss(bossUpdateName, bossUpdateAttackInteger, bossUpdateHpInteger, bossUpdateSpecialAttack);
+					Boss bossUpdate = new Boss(bossUpdateName, bossUpdateAttackInteger, bossUpdateHpInteger,
+							bossUpdateSpecialAttack);
 
 					AdminBossDateLogic abdl = new AdminBossDateLogic();
 					updatePropriety = abdl.executeUpdate(bossOriginal, bossUpdate);
 
-					if(updatePropriety == true) {
+					if (updatePropriety == true) {
 
 						message = "更新が完了しました";
 
@@ -507,7 +551,7 @@ public class AdminFunctionServlet extends HttpServlet {
 			request.setAttribute("message", message);
 
 			//admin.jspへフォワード
-			RequestDispatcher dis = request.getRequestDispatcher("test/admin.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/admin.jsp");
 			dis.forward(request, response);
 
 		}
