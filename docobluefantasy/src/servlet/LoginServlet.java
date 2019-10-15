@@ -2,6 +2,7 @@ package servlet;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -57,6 +58,9 @@ public class LoginServlet extends HttpServlet {
 				request.setAttribute("message", message);
 				url = "/login.jsp";
 			}
+
+			RequestDispatcher dis = request.getRequestDispatcher(url);
+			dis.forward(request, response);
 
 		} //doPOST
 
