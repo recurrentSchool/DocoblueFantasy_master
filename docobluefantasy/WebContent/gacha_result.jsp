@@ -13,14 +13,30 @@
 <title>ガチャ結果</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 </head>
+
 <body>
+
+<br>
+
 <header>
-<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50">
+<div align="center">
+<h1>DOCOBLUEFANTASY攻略</h1>
+<hr>
+</div>
+
+<div align="center">
+<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
+</div>
 </header>
-<table align = center border="1" width="500" height="300">
+
+<br>
+
+<div align="center">
+<table border="1" width="500" height="300"  align = center>
 <th>名前</th>
 <th>攻撃力</th>
 <th>スキル</th>
+
 <tr>
 <td><%= listWeapon.get(0).getName() %></td>
 <td><%= listWeapon.get(0).getAttack() %></td>
@@ -72,9 +88,23 @@
 <td><%= listWeapon.get(9).getSkill() %></td>
 </tr>
 </table>
-<center>
+</div>>
+
+<div align="center">
 <p><a href="/docobluefantasy/gacha.jsp">もう一度引く</a></p><br>
 <p><a href="/docobluefantasy/main.jsp">メインページに戻る</a></p>
-</center>
+
+
+<br>
+		<div align="center">
+
+
+		</div>
+
+
+<hr>
+	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+</div>
+
 </body>
 </html>

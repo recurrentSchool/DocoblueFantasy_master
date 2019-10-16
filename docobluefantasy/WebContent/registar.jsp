@@ -10,12 +10,19 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 
-
 <script type="text/javascript" src="js/registar.js"></script>
 
 </head>
 
 <body>
+
+<br>
+
+<div align="center">
+<h1>DOCOBLUEFANTASY攻略</h1>
+<hr>
+</div>
+
 <header>
 <div align="center">
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">

@@ -4,18 +4,29 @@
     <% String message =(String)request.getAttribute("message"); %>
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)ログインページ</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
+
 <body>
+
+<br>
+
 <header>
+<div align="center">
+<h1>DOCOBLUEFANTASY攻略</h1>
+<hr>
+</div>
+
 <div align="center">
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
 </div>
 </header>
+
 <hr>
 	<%
 		if (message != null) {

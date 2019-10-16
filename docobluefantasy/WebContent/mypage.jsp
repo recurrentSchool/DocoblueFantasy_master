@@ -15,10 +15,19 @@
 
 <body>
 
+<br>
+
 <div align="center">
 <h1>DOCOBLUEFANTASY攻略</h1>
 <hr>
-<br>
+</div>
+
+<header>
+<div align="center">
+<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
+</div>
+</header>
+
 	<table border="1" >
 
 			<tr>
