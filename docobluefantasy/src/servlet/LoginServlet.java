@@ -31,12 +31,14 @@ public class LoginServlet extends HttpServlet {
 		String message = " ";
 		String url = null;
 
-		User user = new User(name, pass);
+		User userLogin = new User(name, pass);
 
 		HttpSession session = request.getSession();
 		session.setAttribute("message", message);
 
 		LoginLogic bo = new LoginLogic();
+
+		User user = bo.executeSelect(userLogin);
 
 		boolean result = bo.executeLogin(user);
 
