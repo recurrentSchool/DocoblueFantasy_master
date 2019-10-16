@@ -7,12 +7,15 @@
 
 <meta charset="UTF-8">
 <title>情報登録画面</title>
-<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin.css">
 </head>
 
 <body>
 <div align="center">
-<h1>DOCOBLUEFANTASY攻略</h1>
+<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150" >
+</div>
+<div align="center">
 <hr>
 
 <h1>追加できる要素は、[武器]、[キャラクター]、[ボス]から1つのみです。</h1>
