@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)キャラクターページ</title>
-<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 </head>
 <body>
 
@@ -38,9 +38,28 @@
 </tr>
 		</table>
 		</div>
+	<br>
+		<div align="center">
+		<table border="1" bgcolor="#FFFFFF">
+		<tr>
+		<th><a href="/docobluefantasy/main.jsp"><font color="#0000CC">戻る</font></a></th>
+		</tr>
+		</table>
+		</div>
+
+
+		<br>
+		<div align="center">
+		<table border="1" bgcolor="#FFFFFF">
+		<tr>
+		<th><a href="/docobluefantasy/main.jsp"><font color="#0000CC">戻る</font></a></th>
+		</tr>
+		</table>
+		</div>
 
 <hr>
-	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+<div align="center">
+<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
 
 </body>

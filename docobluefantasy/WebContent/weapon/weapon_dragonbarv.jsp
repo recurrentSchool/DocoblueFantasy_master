@@ -8,7 +8,8 @@
 <head>
 <meta charset="UTF-8">
 <title>D・ビィ詳細</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 
 <body>
