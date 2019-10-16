@@ -5,15 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>ガチャ画面</title>
-<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 </head>
 <body>
-<center>
+<div align="center">
 <h2>ガチャシミュレーション</h2>
 <form action="/docobluefantasy/GachaServlet" method="post">
 <input type="image" src="${pageContext.request.contextPath}/image/gacha/gacha.gif"><br>
 <input type="image" src="${pageContext.request.contextPath}/image/gacha/gachaBTN.png" width="140" height="70">
 </form>
-</center>
+</div>
 </body>
 </html>

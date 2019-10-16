@@ -4,31 +4,45 @@
 <% Boss boss = (Boss)request.getAttribute("boss"); %>
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="UTF-8">
 <title>ジ・オーダー・グランデ詳細</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/boss.css">
 </head>
+
 <body>
-<center>
+
+<div align="center">
+<h1>DOCOBLUEFANTASY攻略</h1>
+<hr>
+
+<div align="center">
 <img src="${pageContext.request.contextPath}/image/boss/GrandOrder.png" width="400" height="350" alt="BlueSphereの画像">
-</center>
-	<table border="1" align="center">
+</div>
+	<table border="1" >
 			<tr>
 				<th>名前</th>
-				<td><%= boss.getName()%></td>
+				<td align="center"><%= boss.getName()%></td>
 			</tr>
 			<tr>
 				<th>攻撃力</th>
-				<td><%= boss.getAttack()%></td>
+				<td align="center"><%= boss.getAttack()%></td>
 			</tr>
 			<tr>
 				<th>HP</th>
-				<td><%= boss.getHp()%></td>
+				<td align="center"><%= boss.getHp()%></td>
 			</tr>
 			<tr>
 				<th>特殊攻撃</th>
-				<td><%= boss.getSpecialAttack()%></td>
+				<td align="center"><%= boss.getSpecialAttack()%></td>
 			</tr>
 		</table>
+
+<hr>
+<p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
+</div>
+
 </body>
 </html>

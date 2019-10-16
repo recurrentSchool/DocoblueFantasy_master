@@ -35,11 +35,12 @@ public class ContentsServlet extends HttpServlet
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
+		request.setCharacterEncoding("UTF-8");
+
 		ContentsBossSelectLogic cbsl = new ContentsBossSelectLogic();
 		ContentsCharacterSelectLogic ccsl = new ContentsCharacterSelectLogic();
 		ContentsWeaponSelectLogic cwsl = new ContentsWeaponSelectLogic();
 
-		request.setCharacterEncoding("UTF-8");
 		String url = null;
 		String bossName = request.getParameter("bossName");
 		String charaName = request.getParameter("characterName");

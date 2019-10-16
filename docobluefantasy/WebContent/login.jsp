@@ -7,8 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)ログインページ</title>
-<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
-<link rel="stylesheet" href="/docobluefantasy/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
 <header>
@@ -28,19 +28,18 @@
 
 <div align="center">
 	<form action="/docobluefantasy/LoginServlet" method="POST">
-		<table>
+		<table border="1">
 			<tr>
-				<th>名前</th>
+				<th bgcolor="#99CCFF">名前</th>
 				<td><input type="text" name="name" required></td>
 			</tr>
 			<tr>
-				<th>パスワード</th>
+				<th bgcolor="#99CCFF">パスワード</th>
 				<td><input type="password" name="pass" required></td>
 			</tr>
-			<tr>
-				<td><input type="submit" value="ログイン"></td>
-			</tr>
 		</table>
+		<br>
+		<input type="submit" value="ログイン">
 	</form>
 <hr>
 

@@ -31,7 +31,7 @@ public class AdminFunctionServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		String message = (String) request.getAttribute("message");
-		String sessionStatus = (String) request.getAttribute("status");
+		String sessionStatus = (String) request.getParameter("status");
 		String url = null;
 
 		//メッセージをセット
@@ -50,7 +50,7 @@ public class AdminFunctionServlet extends HttpServlet {
 
 		}
 
-		//admin.jspへフォワード
+		//トップページもしくは管理画面へフォワード
 		RequestDispatcher dis = request.getRequestDispatcher(url);
 		dis.forward(request, response);
 

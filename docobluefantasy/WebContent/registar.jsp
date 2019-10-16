@@ -3,12 +3,34 @@
 <% String message = (String) request.getAttribute("message"); %>
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)会員登録ページ</title>
-<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
-<link rel="stylesheet" href="/docobluefantasy/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+
+
+<script>
+
+function CheckPass()
+{
+
+    var pass1 = document.getElementById("pass1").value; //メールフォームの値を取得
+    var pass2 = document.getElementById("pass2").value; //メール確認用フォームの値を取得
+    // パスワードの一致確認
+    if (pass1 != pass2)
+    {
+      alert("パスワードと確認用パスワードが一致しません"); // 一致していなかったら、エラーメッセージを表示する
+      return false;
+    }else{
+      return true;
+    }
+}
+
+</script>
 </head>
+
 <body>
 <header>
 <div align="center">
@@ -24,7 +46,7 @@
 <%
 	}
 %>
-	<form action="/docobluefantasy/RegisterServlet" method="POST">
+	<form action="/docobluefantasy/RegisterServlet" method="POST" onSubmit="return CheckPass()">
 	<input type="hidden" name="admin" value="1">
 		<table border="1" >
 			<tr>
@@ -37,11 +59,11 @@
 			</tr>
 			<tr>
 				<th bgcolor="#99CCFF">パスワード</th>
-				<td><input type="password" name="pass" required></td>
+				<td><input type="password" name="pass" id="pass1" required></td>
 			</tr>
 			<tr>
 				<th bgcolor="#99CCFF" width="120" height="10">パスワード確認</th>
-				<td><input type="password" name="pass" required></td>
+				<td><input type="password" name="pass" id="pass2" required></td><!-- class="conf" -->
 		</table>
 		<p><input type="submit" value="ログイン"></p>
 	</form>
