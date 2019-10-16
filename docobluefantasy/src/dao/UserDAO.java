@@ -222,4 +222,72 @@ public class UserDAO {
 		return accountBool;
 
 	}
+
+	//ユーザー情報の取得
+	public User selectDB(User user) {
+
+		//Selectの結果をユーザー情報に格納するための変数
+		User userResult = null;
+
+		try {
+
+			conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
+
+			String sql = "SELECT ADMIN,NAME,PASS,BILLING FROM USER WHERE NAME = ? AND PASS = ?";
+			pStmt = conn.prepareStatement(sql);
+			pStmt.setString(1, user.getName());
+			pStmt.setString(2, user.getPass());
+
+
+			rs = pStmt.executeQuery();
+
+			if (rs.next()) {
+
+				int admin = rs.getInt("ADMIN");
+				String name = rs.getString("NAME");
+				String pass = rs.getString("PASS");
+				int billing = rs.getInt("BILLING");
+
+				userResult = new User(admin, name, pass, billing);
+
+			}
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+
+			//closeする
+		} finally {
+			if (rs != null) {
+				try {
+
+					rs.close();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (pStmt != null) {
+				try {
+
+					pStmt.close();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (conn != null) {
+				try {
+
+					conn.close();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return userResult;
+
+	}
 }
