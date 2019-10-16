@@ -12,11 +12,13 @@
 <meta charset="UTF-8">
 <title>ガチャ結果</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/gacharesult.css">
 </head>
 <body>
 <header>
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50">
 </header>
+<div align="center">
 <table align = center border="1" width="500" height="300">
 <th>名前</th>
 <th>攻撃力</th>
@@ -72,8 +74,9 @@
 <td><%= listWeapon.get(9).getSkill() %></td>
 </tr>
 </table>
+</div>
 <center>
-<p><a href="/docobluefantasy/gacha.jsp">もう一度引く</a></p><br>
+<p><a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/regacha.png"></a></p><br>
 <p><a href="/docobluefantasy/main.jsp">メインページに戻る</a></p>
 </center>
 </body>
