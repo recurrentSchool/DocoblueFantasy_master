@@ -22,6 +22,7 @@
 </div>
 </header>
 <div align="center"><h2>武器一覧</h2></div>
+<br>
 		<div align="center">
 		<table border="1">
 				<tr>
