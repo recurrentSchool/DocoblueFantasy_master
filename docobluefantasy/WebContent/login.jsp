@@ -17,6 +17,7 @@
 </div>
 </header>
 <hr>
+
 	<%
 		if (message != null) {
 	%>
@@ -24,8 +25,6 @@
 	<%
 		}
 	%>
-
-
 <div align="center">
 	<form action="/docobluefantasy/LoginServlet" method="POST">
 		<table border="1">

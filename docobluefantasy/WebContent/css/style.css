@@ -13,7 +13,7 @@ body {
 .example a {/*aタグを画像の真ん中に*/
   position: absolute;
   top: 80%;
-  left: 50%;
+  left: 55%;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
@@ -24,6 +24,7 @@ body {
   padding: 7px;/*文字と線の間の余白*/
   color: #400080;/*文字色*/
   text-decoration: none;/*下線を表示させない*/
+  background: rgba(255,255,255, 0.8);
   }
 
 .example a:hover{/*カーソルを当てたとき*/
@@ -40,8 +41,8 @@ body {
 
 .example1 a {/*aタグを画像の真ん中に*/
   position: absolute;
-  top: 92%;
-  left: 50%;
+  top: 80%;
+  left: 45%;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
