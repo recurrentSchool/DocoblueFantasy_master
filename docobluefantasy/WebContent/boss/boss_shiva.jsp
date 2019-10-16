@@ -8,7 +8,8 @@
 <head>
 <meta charset="UTF-8">
 <title>シヴァ詳細</title>
-<link rel="stylesheet" href="boss.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/boss.css">
 </head>
 
 <body>

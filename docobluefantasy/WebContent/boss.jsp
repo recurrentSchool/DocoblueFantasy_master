@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)ボスページ</title>
-<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 </head>
 <body>
 
@@ -38,7 +38,7 @@
 		</table>
 		</div>
 
-
+</div>
 		<br>
 		<div align="center">
 		<table border="1" bgcolor="#FFFFFF">
