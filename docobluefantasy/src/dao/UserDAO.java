@@ -28,6 +28,8 @@ public class UserDAO {
 
 			conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
 
+			conn.setAutoCommit(false);
+
 			String sql = "INSERT INTO USER (ADMIN,NAME,PASS,BILLING) VALUES (?,?,?,?)";
 			pStmt = conn.prepareStatement(sql);
 			pStmt.setInt(1, user.getAdmin());
@@ -36,6 +38,12 @@ public class UserDAO {
 			pStmt.setInt(4, user.getBilling());
 
 			int propriety = pStmt.executeUpdate();
+
+			try {
+				conn.commit();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
 
 			//登録が完了出来た時、trueが返る
 			if (propriety == 0) {
@@ -238,7 +246,6 @@ public class UserDAO {
 			pStmt.setString(1, user.getName());
 			pStmt.setString(2, user.getPass());
 
-
 			rs = pStmt.executeQuery();
 
 			if (rs.next()) {
@@ -288,6 +295,104 @@ public class UserDAO {
 		}
 
 		return userResult;
+
+	}
+
+	//ガチャ1回につき3000円追加する
+	public boolean billing3000DB(User user) {
+
+		int billing = 0;
+		boolean updateBool = false;
+
+		try {
+
+			conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
+
+			String sql = "SELECT BILLING FROM USER WHERE NAME = ? AND PASS = ?";
+
+			pStmt = conn.prepareStatement(sql);
+			pStmt.setString(1, user.getName());
+			pStmt.setString(2, user.getPass());
+
+			rs = pStmt.executeQuery();
+
+			if (rs.next()) {
+
+				billing = rs.getInt("BILLING");
+
+			}
+
+			StringBuilder sqlWrite = new StringBuilder();
+
+			conn.setAutoCommit(false);
+
+			sqlWrite.append("UPDATE USER ");
+			sqlWrite.append("SET ");
+			sqlWrite.append("BILLING = ? ");//1
+			sqlWrite.append("WHERE ");
+			sqlWrite.append("NAME = ?");//2
+
+			pStmt = conn.prepareStatement(sqlWrite.toString());
+			pStmt.setInt(1, billing + 3000);
+			pStmt.setString(2, user.getName());
+
+			int propriety = pStmt.executeUpdate();
+
+			try {
+				conn.commit();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+
+			//削除が完了出来た時、trueが返る
+			if (propriety == 0) {
+
+				updateBool = false;
+
+			} else {
+
+				updateBool = true;
+
+			}
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+			return false;
+
+			//closeする
+		} finally {
+
+			if (rs != null) {
+				try {
+
+					rs.close();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (pStmt != null) {
+				try {
+
+					pStmt.close();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (conn != null) {
+				try {
+
+					conn.close();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return updateBool;
 
 	}
 }
