@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%@ page import="bean.User"%>
+<% User user = (User)session.getAttribute("user"); %>
+
 <!DOCTYPE html>
 <html>
 
@@ -14,8 +18,20 @@
 <div align="center">
 <h1>DOCOBLUEFANTASY攻略</h1>
 <hr>
+<br>
+	<table border="1" >
+
+			<tr>
+				<th>ユーザー名</th>
+				<td align="center"><%= user.getName()%></td>
+			</tr>
+			<tr>
+				<th>総課金額</th>
+				<td align="center"><%= user.getBilling()%></td>
+			</tr>
 
 
+		</table>
 
 
 

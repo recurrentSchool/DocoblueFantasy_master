@@ -19,32 +19,40 @@
 </header>
 <hr>
 <div align="center">
-<table>
-<tr>
-<th>名前は</th>
-<td><%= user.getName()%></td>
-</tr>
-<tr>
-	<th>パスワード</th>
-	<td><%= user.getPass()%></td>
-</tr>
-<tr>
-	<th>課金額</th>
-	<td><%= user.getBilling()%></td>
-</tr>
-</table>
+
+
+<br>
+	<b>名前　：　</b><%= user.getName()%>
+<br>
+<br>
+	<b>パスワード　：　</b><%= user.getPass()%>
+<br>
+<br>
+	<b>課金額　：　</b><%= user.getBilling()%>
+<br>
+<br>
+<br>
+<font size="10" color="black">この情報でよろしいですか?</font>
+<br>
+<br>
+<br>
 <form action="/docobluefantasy/RegisterServlet" method="GET">
 <input type="submit" value="はい">
 
 <p>
 <div align="right">
 <p>
-	<a href="/docobluefantasy/register.jsp" >戻る</a>
+	<a href="/docobluefantasy/registar.jsp" >戻る</a>　　
 </p>
 </div>
 </form>
+
+</div>
+
+
 <hr>
 
+<div align="center">
 
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
