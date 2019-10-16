@@ -40,15 +40,10 @@
 		<br>
 		<input type="submit" value="ログイン">
 	</form>
-
-	<table>
-	<tr>
-	<th><div align="center">ホーム画面に戻るには「戻る」を</div></th>
-	<tr>
-	<tr>
-	<td><div align="center"><a href="/docobluefantasy/index.jsp">戻る</a></div></td>
-	</tr>
-	</table>
+	<br>
+	<p>ホーム画面に戻るには「戻る」を</p>
+	<br>
+	<a href="/docobluefantasy/index.jsp">戻る</a>
 
 <hr>
 
