@@ -14,43 +14,49 @@
 
 <body>
 
+<header>
+<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50">
+</header>
+<div class="main_content">
+<div class="image">
 <div align="center">
-<h1>DOCOBLUEFANTASY攻略</h1>
-<hr>
-
-<div align="center">
-<img src="${pageContext.request.contextPath}/image/character/eugen.png" width="400" height="350" alt="オイゲンの画像">
+<img src="${pageContext.request.contextPath}/image/character/eugen.png" width="560" height="490" alt="オイゲンの画像">
 </div>
-	<table border="1" >
+</div>
+</div>
+<div class="main_visual">
+<div class="table">
+	<table>
 			<tr>
-				<th>名前</th>
+				<th>名前：</th>
 				<td align="center"><%= chara.getName()%></td>
 			</tr>
 			<tr>
-				<th>レアリティ</th>
+				<th>レアリティ：</th>
 				<td align="center"><%= chara.getRarity()%></td>
 			</tr>
 			<tr>
-				<th>攻撃力</th>
+				<th>攻撃力：</th>
 				<td align="center"><%= chara.getAttack()%></td>
 			</tr>
 			<tr>
-				<th>HP</th>
+				<th>HP：</th>
 				<td align="center"><%= chara.getHp()%></td>
 			</tr>
 			<tr>
-				<th>スキル</th>
+				<th>スキル：</th>
 				<td align="center"><%= chara.getSkill()%></td>
 			</tr>
 			<tr>
-				<th>評価</th>
+				<th>評価：</th>
 				<td align="center"><%= chara.getEvaluation()%></td>
 			</tr>
 		</table>
 
-<hr>
-<p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
 </div>
-
+</div>
+<div class="header">
+<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+</div>
 </body>
 </html>
