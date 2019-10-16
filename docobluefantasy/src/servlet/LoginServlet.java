@@ -52,17 +52,18 @@ public class LoginServlet extends HttpServlet {
 
 				url = "/main.jsp";
 
-			} else {
-
-				message = "パスワードもしくは名前が違います";
-				request.setAttribute("message", message);
-				url = "/login.jsp";
 			}
 
-			RequestDispatcher dis = request.getRequestDispatcher(url);
-			dis.forward(request, response);
+		} else {
 
-		} //doPOST
+			message = "パスワードもしくは名前が違います";
+			request.setAttribute("message", message);
+			url = "/login.jsp";
 
-	}
+		}
+
+		RequestDispatcher dis = request.getRequestDispatcher(url);
+		dis.forward(request, response);
+
+	} //doPOST
 }
