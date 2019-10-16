@@ -23,4 +23,14 @@ public class LoginLogic {
 
 	}
 
+	//ユーザー情報を返す
+	public User executeSelect(User user) {
+
+		UserDAO userDAO = new UserDAO();
+		User resultUser = userDAO.selectDB(user);
+
+		return resultUser;
+
+	}
+
 }
