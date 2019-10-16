@@ -16,6 +16,9 @@
 </div>
 </header>
 <hr>
+<div align="right">
+<a href=""><input type="image" src="${pageContext.request.contextPath}/image/icon/myPage.png"></a>
+</div>
 <script type="text/javascript">
 
 

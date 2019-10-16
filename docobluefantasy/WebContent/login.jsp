@@ -40,6 +40,16 @@
 		<br>
 		<input type="submit" value="ログイン">
 	</form>
+
+	<table>
+	<tr>
+	<th><div align="center">ホーム画面に戻るには「戻る」を</div></th>
+	<tr>
+	<tr>
+	<td><div align="center"><a href="/docobluefantasy/index.jsp">戻る</a></div></td>
+	</tr>
+	</table>
+
 <hr>
 
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
