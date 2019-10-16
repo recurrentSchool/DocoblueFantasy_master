@@ -38,9 +38,7 @@
 		</table>
 		</div>
 
-<hr>
-<p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
-</div>
+
 		<br>
 		<div align="center">
 		<table border="1" bgcolor="#FFFFFF">
@@ -54,5 +52,6 @@
 <div align="center">
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
+
 </body>
 </html>
