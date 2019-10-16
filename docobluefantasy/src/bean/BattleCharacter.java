@@ -1,7 +1,5 @@
 package bean;
 
-import java.io.Serializable;
-
 public class BattleCharacter implements Serializable {
 
 	private String name;
