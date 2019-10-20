@@ -175,12 +175,11 @@ public class WeaponDAO {
 			conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
 
 			for (int i = 0; i < 10; i++) {
-				String sql = "SELECT * FROM WEAPON ORDER BY rand()";
+
+				String sql = "SELECT * FROM WEAPON ORDER BY rand() LIMIT 1";
 				pStmt = conn.prepareStatement(sql);
 
 				rs = pStmt.executeQuery();
-
-
 
 				while (rs.next()) {
 
@@ -193,6 +192,7 @@ public class WeaponDAO {
 				}
 
 			}
+
 		} catch (SQLException e) {
 
 			e.printStackTrace();

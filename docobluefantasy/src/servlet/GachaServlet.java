@@ -9,7 +9,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import bean.User;
 import bean.Weapon;
 import model.GachaLogic;
 
@@ -25,9 +27,11 @@ public class GachaServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		request.setCharacterEncoding("UTF-8");
+		HttpSession session = request.getSession();
+		User user = (User) session.getAttribute("user");
 
 		GachaLogic gachalogic = new GachaLogic();
-		List<Weapon> listWeapon = gachalogic.executeGetWeapon();
+		List<Weapon> listWeapon = gachalogic.executeGetWeapon(user);
 
 		request.setAttribute("listWeapon", listWeapon);
 

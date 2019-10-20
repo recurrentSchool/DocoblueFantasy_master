@@ -14,14 +14,15 @@
 
 <body>
 
-<div align="center">
-<h1>DOCOBLUEFANTASY攻略</h1>
-<hr>
+<header>
+<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50">
+</header>
 
 <div align="center">
 <img src="${pageContext.request.contextPath}/image/character/io&rosetta.png" width="400" height="350" alt="ロゼッタの画像">
-</div>
-	<table border="1" >
+
+<div class="table">
+	<table>
 			<tr>
 				<th>名前</th>
 				<td align="center"><%= chara.getName()%></td>
@@ -48,8 +49,11 @@
 			</tr>
 		</table>
 
-<hr>
-<p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
+</div>
+<br>
+<div class="header">
+<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+</div>
 </div>
 
 </body>
