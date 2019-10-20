@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+body {
+	background-image: url("/docobluefantasy/image/backGround/gacharesult.jpg");
+	background-position: top center;
+	background-size: cover;
+}
+
+table {
+	border: 1;
+	border-color: #000000;
+	background-color: #FFFFFF;
+}
+}

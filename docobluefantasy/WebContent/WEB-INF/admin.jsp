@@ -8,16 +8,17 @@
 <head>
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)管理者ページ</title>
-<link rel="stylesheet" href="/docobluefantasy/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin.css">
 </head>
 <body>
 <br>
 
 <header>
 <div align="center">
-<h1>DOCOBLUEFANTASY攻略</h1>
-<hr>
+<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150" >
 </div>
+<hr>
 
 <div align="center">
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
@@ -25,7 +26,6 @@
 </header>
 
 	<div align="center">
-
 	<%
 		if (message != null) {
 	%>
@@ -43,11 +43,13 @@
 </form>
 
 <br>
-
-<a href="/docobluefantasy/AdminFunctionServlet?status=logout">ログアウト</a>
-
+<table>
+<tr>
+<th width="50"><a href="/docobluefantasy/AdminFunctionServlet?status=logout"><input type="image" src="${pageContext.request.contextPath}/image/icon/logout.png"></a></th>
+</tr>
+</table>
 <hr>
-	<p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
+	<h5><font color="#000000">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
 </body>
 </html>

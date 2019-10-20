@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>ガチャ画面</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/gacha.css">
 </head>
 
 <body>

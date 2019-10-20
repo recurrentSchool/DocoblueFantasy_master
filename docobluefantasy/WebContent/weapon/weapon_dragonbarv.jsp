@@ -24,7 +24,6 @@
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
 </div>
 </header>
-
 <hr>
 <div align="center">
 <img src="${pageContext.request.contextPath}/image/weapon/DragonBarV.png" width="400" height="350" alt="D・ビィの画像">
@@ -57,7 +56,6 @@
 
 <hr>
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
-<br>
 </div>
 </body>
 </html>

@@ -28,6 +28,7 @@
 </header>
 
 <hr>
+
 	<%
 		if (message != null) {
 	%>
@@ -35,8 +36,6 @@
 	<%
 		}
 	%>
-
-
 <div align="center">
 	<form action="/docobluefantasy/LoginServlet" method="POST">
 		<table border="1">
@@ -52,6 +51,11 @@
 		<br>
 		<input type="submit" value="ログイン">
 	</form>
+	<br>
+	<p>ホーム画面に戻るには「戻る」を</p>
+	<br>
+	<a href="/docobluefantasy/index.jsp">戻る</a>
+
 <hr>
 
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
