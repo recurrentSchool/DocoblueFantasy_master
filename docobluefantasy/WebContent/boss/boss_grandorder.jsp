@@ -14,34 +14,44 @@
 
 <body>
 
-<div align="center">
-<h1>DOCOBLUEFANTASY攻略</h1>
-<hr>
+<header>
+<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50">
+</header>
 
 <div align="center">
 <img src="${pageContext.request.contextPath}/image/boss/GrandOrder.png" width="400" height="350" alt="BlueSphereの画像">
-</div>
-	<table border="1" >
+
+<div class="table">
+	<table>
 			<tr>
-				<th>名前</th>
+				<th>名前：</th>
 				<td align="center"><%= boss.getName()%></td>
 			</tr>
 			<tr>
-				<th>攻撃力</th>
+				<th>攻撃力：</th>
 				<td align="center"><%= boss.getAttack()%></td>
 			</tr>
 			<tr>
-				<th>HP</th>
+				<th>HP：</th>
 				<td align="center"><%= boss.getHp()%></td>
 			</tr>
 			<tr>
-				<th>特殊攻撃</th>
+				<th>特殊攻撃：</th>
 				<td align="center"><%= boss.getSpecialAttack()%></td>
+
 			</tr>
 		</table>
-
-<hr>
-<p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
+</div>
+<!-- <table border="1" bgcolor="#FFFFFF">
+		<tr>
+		<th><a href="/docobluefantasy/boss.jsp"><font color="#0000CC">戻る</font></a></th>
+		</tr>
+		</table>
+ -->
+<br>
+<div class="header">
+<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+</div>
 </div>
 
 </body>

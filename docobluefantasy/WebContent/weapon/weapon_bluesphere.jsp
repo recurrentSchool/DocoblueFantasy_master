@@ -13,10 +13,11 @@
 </head>
 
 <body>
-<div align="center">
-<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150" >
-</div>
-<hr>
+
+<header>
+<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50" >
+</header>
+
 <div align="center">
 <img src="${pageContext.request.contextPath}/image/weapon/BlueSphere.png" width="400" height="350" alt="ブルースフィアの画像">
 
@@ -34,11 +35,12 @@
 			<td align="center"><%= weapon.getSkill()%></td>
 		</tr>
 	</table>
-	<table border="1" bgcolor="#FFFFFF">
+	<!-- <table border="1" bgcolor="#FFFFFF">
 		<tr>
 		<th><a href="/docobluefantasy/weapon.jsp"><font color="#0000CC">戻る</font></a></th>
 		</tr>
 		</table>
+		 -->
 	<hr>
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
