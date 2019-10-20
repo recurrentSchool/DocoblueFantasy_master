@@ -20,8 +20,6 @@
 <body>
 
 <br>
-
-<<<<<<< HEAD
 <header>
 <div align="center">
 <h1>DOCOBLUEFANTASY攻略</h1>
@@ -32,21 +30,9 @@
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
 </div>
 </header>
-<<<<<<< HEAD
-
 <br>
-
 <div align="center">
-<table border="1" width="500" height="300"  align = center>
-=======
 <table align = center border="1" width="500" height="300" id="weaponGacha">
->>>>>>> refs/remotes/origin/master
-=======
-<header>
-<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50">
-</header>
-<table align = center border="1" width="500" height="300" id="weaponGacha">
->>>>>>> refs/remotes/origin/master
 <th>名前</th>
 <th>攻撃力</th>
 <th>スキル</th>
@@ -54,44 +40,19 @@
 <tr class="weapon">
 	<td><%= weaponGacha.getName() %></td>
 	<td><%= weaponGacha.getAttack() %></td>
-<<<<<<< HEAD
 	<td><%= weaponGacha.getSkill() %></td>
-=======
-	<td><%= weaponGacha.getSkill() %></td>
-=======
-
-<tr>
-<td><%= listWeapon.get(0).getName() %></td>
-<td><%= listWeapon.get(0).getAttack() %></td>
-<td><%= listWeapon.get(0).getSkill() %></td>
->>>>>>> refs/heads/Mwork
->>>>>>> refs/remotes/origin/master
 </tr>
 <% } %>
 </table>
-<<<<<<< HEAD
 </div>
-<center>
-<p><a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/regacha.png"></a></p><br>
-=======
-</div>>
-
 <div align="center">
-<p><a href="/docobluefantasy/gacha.jsp">もう一度引く</a></p><br>
->>>>>>> refs/heads/Mwork
+<p><a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/regacha.png"></a></p><br>
 <p><a href="/docobluefantasy/main.jsp">メインページに戻る</a></p>
-
-
+</div>
 <br>
-		<div align="center">
-
-
-		</div>
-
-
-<hr>
+<div align="center">
+	<hr>
 	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
-
 </body>
 </html>

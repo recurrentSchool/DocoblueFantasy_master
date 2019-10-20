@@ -19,10 +19,6 @@
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150" >
 </div>
 <hr>
-
-<div align="center">
-<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
-</div>
 </header>
 
 	<div align="center">
