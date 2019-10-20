@@ -12,11 +12,20 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin.css">
 </head>
 <body>
+<br>
+
+<header>
 <div align="center">
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150" >
 </div>
 <hr>
+
 <div align="center">
+<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
+</div>
+</header>
+
+	<div align="center">
 	<%
 		if (message != null) {
 	%>

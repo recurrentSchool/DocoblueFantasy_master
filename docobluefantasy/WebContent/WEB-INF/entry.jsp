@@ -12,11 +12,22 @@
 </head>
 
 <body>
+<br>
+
+<header>
 <div align="center">
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150" >
 </div>
 <div align="center">
 <hr>
+</div>
+
+<div align="center">
+<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
+</div>
+</header>
+
+<div align="center">
 
 <h1>追加できる要素は、[武器]、[キャラクター]、[ボス]から1つのみです。</h1>
 

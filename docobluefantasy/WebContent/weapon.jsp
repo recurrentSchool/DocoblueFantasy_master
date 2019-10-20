@@ -2,26 +2,30 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)武器ページ</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 </head>
+
 <body>
 
-<div align="center">
-<h1>DOCOBLUEFANTASY攻略</h1>
-<hr>
+<br>
 
 <header>
 <div align="center">
-<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
-
+<h1>DOCOBLUEFANTASY攻略</h1>
 <hr>
+</div>
 
+<div align="center">
+<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
 </div>
 </header>
+
 <div align="center"><h2>武器一覧</h2></div>
+<br>
 		<div align="center">
 		<table border="1">
 				<tr>
@@ -50,7 +54,7 @@
 
 <hr>
 	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
-</div>
+
 
 </body>
 </html>

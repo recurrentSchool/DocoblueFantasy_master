@@ -8,17 +8,21 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 </head>
 <body>
+<br>
 
+<header>
 <div align="center">
 <h1>DOCOBLUEFANTASY攻略</h1>
 <hr>
+</div>
 
-<header>
 <div align="center">
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
 </div>
 </header>
+
 <div align="center"><h2>キャラクター一覧</h2></div>
+<br>
 		<div align="center">
 		<table border="1">
 				<tr>
@@ -38,15 +42,6 @@
 </tr>
 		</table>
 		</div>
-	<br>
-		<div align="center">
-		<table border="1" bgcolor="#FFFFFF">
-		<tr>
-		<th><a href="/docobluefantasy/main.jsp"><font color="#0000CC">戻る</font></a></th>
-		</tr>
-		</table>
-		</div>
-
 
 		<br>
 		<div align="center">

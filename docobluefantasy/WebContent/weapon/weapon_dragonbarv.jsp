@@ -13,17 +13,17 @@
 </head>
 
 <body>
+<br>
+
+<header>
 <div align="center">
 <h1>DOCOBLUEFANTASY攻略</h1>
 </div>
-<hr>
-<header>
 <div align="center">
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150" >
 </div>
 </header>
 <hr>
-
 <div align="center">
 <img src="${pageContext.request.contextPath}/image/weapon/DragonBarV.png" width="400" height="350" alt="D・ビィの画像">
 
@@ -41,13 +41,21 @@
 			<td align="center"><%= weapon.getSkill()%></td>
 		</tr>
 	</table>
-	<table border="1" bgcolor="#FFFFFF">
+
+<br>
+		<div align="center">
+		<table border="1" bgcolor="#FFFFFF">
 		<tr>
-		<th><a href="/docobluefantasy/weapon.jsp"><font color="#0000CC">戻る</font></a></th>
+		<th><a href="/docobluefantasy/character.jsp"><font color="#0000CC">戻る</font></a></th>
 		</tr>
 		</table>
-	<hr>
+
+		</div>
+
+
+<hr>
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+<br>
 </div>
 </body>
 </html>

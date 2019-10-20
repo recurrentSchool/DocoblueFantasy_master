@@ -10,17 +10,25 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 
-
-<script type="text/javascript" src="JS/registar.js"></script>
+<script type="text/javascript" src="js/registar.js"></script>
 
 </head>
 
 <body>
+
+<br>
+
+<div align="center">
+<h1>DOCOBLUEFANTASY攻略</h1>
+<hr>
+</div>
+
 <header>
 <div align="center">
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
 </div>
 </header>
+<br>
 <hr>
 <div align="center">
 <%
@@ -30,6 +38,7 @@
 <%
 	}
 %>
+<br>
 	<form action="/docobluefantasy/RegisterServlet" method="POST" onSubmit="return CheckPass()">
 	<input type="hidden" name="admin" value="1">
 		<table border="1" >
@@ -37,6 +46,7 @@
 				<th bgcolor="#99CCFF">名前</th>
 				<td><input type="text" name="name" required></td>
 			</tr>
+
 			<tr>
 				<th bgcolor="#99CCFF">課金額</th>
 				<td><input type="text" name="billing" required></td>
@@ -49,7 +59,7 @@
 				<th bgcolor="#99CCFF" width="120" height="10">パスワード確認</th>
 				<td><input type="password" name="pass" id="pass2" required></td><!-- class="conf" -->
 		</table>
-		<p><input type="submit" value="ログイン"></p>
+		<p><input type="submit" value="登録"></p>
 	</form>
 	<br>
 	<p>ホーム画面に戻るには「戻る」を</p>
