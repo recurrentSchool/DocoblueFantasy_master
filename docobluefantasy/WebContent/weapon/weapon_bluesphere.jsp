@@ -45,18 +45,29 @@
 			<td align="center"><%= weapon.getSkill()%></td>
 		</tr>
 	</table>
+<<<<<<< HEAD
 
 <br>
 		<div align="center">
 		<table border="1" bgcolor="#FFFFFF">
+=======
+	<!-- <table border="1" bgcolor="#FFFFFF">
+>>>>>>> refs/remotes/origin/master
 		<tr>
 		<th><a href="/docobluefantasy/character.jsp"><font color="#0000CC">戻る</font></a></th>
 		</tr>
 		</table>
+<<<<<<< HEAD
 
 		</div>
 
 
+=======
+		 -->
+	<hr>
+<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+</div>
+>>>>>>> refs/remotes/origin/master
 <hr>
 	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 

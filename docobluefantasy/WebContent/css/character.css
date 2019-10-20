@@ -1,6 +1,71 @@
 @charset "UTF-8";
 
 body {
-	background-image: url("/docobluefantasy/image/backGround/summon.jpg");
+	background-image: url("/docobluefantasy/image/backGround/summon.png");
 	background-position: top center;
 	background-size: cover;
+}
+
+.table {
+	font-size: 125%;
+	line-height: 150%;
+	color: #fff8dc;
+	background-color: rgba(96,96,255,0.8);
+	height: 180px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-left: 30px;
+	padding-right: 30px;
+	width: 380px;
+	margin-top : 150px;
+	margin-bottom : 150px;
+	margin-left : 690px ;
+	margin-right: 0px;
+}
+
+main {
+    padding:  10px;            /* 余白指定 */
+    overflow:  hidden;         /* floatで高さがなくなる問題解消 */
+}
+
+.main_visual {
+    text-align:  center;        /* 文字中央揃え */
+    padding: 9px;              /* 余白指定 */
+}
+
+.side {
+    width: 55%;                /* 幅指定 */
+    float:  left;              /* 要素を並べる */
+    height: 200px;             /* 高さ指定 */
+}
+
+.main_content {
+    width:  75%;               /* 幅指定 */
+    float:  left;              /* 要素を並べる */
+    height: 200px;             /* 高さ指定 */
+}
+
+.right{
+	margin-left : auto ;
+
+	margin-right : 0 ;
+}
+
+.footer {
+	background-color: #fff;
+	height: 12.5px;
+	width: 100%;
+    padding: 4px 0;
+    text-align:  center;
+}
+
+.header {
+	background-color: #fff;
+	height: 12.5px;
+	padding: 6px;
+}
+
+.image{
+	margin-right:260px;
+}
+

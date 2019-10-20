@@ -1,6 +1,8 @@
 package bean;
 
-public class Weapon {
+import java.io.Serializable;
+
+public class Weapon implements Serializable {
 	private String name;
 	private int attack;
 	private String skill;

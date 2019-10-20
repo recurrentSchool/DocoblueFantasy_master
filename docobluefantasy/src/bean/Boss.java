@@ -1,6 +1,8 @@
 package bean;
 
-public class Boss {
+import java.io.Serializable;
+
+public class Boss implements Serializable {
 	private String name;
 	private int attack;
 	private int hp;

@@ -1,6 +1,8 @@
 package bean;
 
-public class BattleCharacter {
+import java.io.Serializable;
+
+public class BattleCharacter implements Serializable {
 
 	private String name;
 	private String rarity;
