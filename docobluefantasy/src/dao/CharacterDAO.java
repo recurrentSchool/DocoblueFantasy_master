@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import bean.BattleCharacter;
 
@@ -155,6 +157,75 @@ public class CharacterDAO {
 		}
 
 		return characterResult;
+
+	}
+
+	//キャラクター情報の全取得
+	public List<BattleCharacter> selectAllDB() {
+
+		//Selectの結果をキャラクター情報に格納するための変数
+		List<BattleCharacter> battleCharacterList = new ArrayList<BattleCharacter>();
+
+		try {
+
+			conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
+
+			String sql = "SELECT NAME,RARITY,ATTACK,HP,SKILL,EVALUATION FROM BATTLECHARACTER";
+			pStmt = conn.prepareStatement(sql);
+
+			rs = pStmt.executeQuery();
+
+			while (rs.next()) {
+
+				String name = rs.getString("NAME");
+				String rarity = rs.getString("RARITY");
+				int attack = rs.getInt("ATTACK");
+				int hp = rs.getInt("HP");
+				String skill = rs.getString("SKILL");
+				int evalution = rs.getInt("EVALUATION");
+
+				BattleCharacter battleCharacter = new BattleCharacter(name,rarity,attack,hp,skill,evalution);
+
+				battleCharacterList.add(battleCharacter);
+
+			}
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+
+			//closeする
+		} finally {
+			if (rs != null) {
+				try {
+
+					rs.close();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (pStmt != null) {
+				try {
+
+					pStmt.close();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (conn != null) {
+				try {
+
+					conn.close();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return battleCharacterList;
 
 	}
 

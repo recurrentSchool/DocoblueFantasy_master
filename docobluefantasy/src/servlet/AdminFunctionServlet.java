@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -77,9 +78,33 @@ public class AdminFunctionServlet extends HttpServlet {
 
 			} else if (adminPage.equals("情報削除")) {
 
+				AdminBossDateLogic abdl = new AdminBossDateLogic();
+				AdminCharacterDateLogic acdl = new AdminCharacterDateLogic();
+				AdminWeaponDateLogic awdl = new AdminWeaponDateLogic();
+
+				List<Boss> bossList = abdl.executeAllSelect();
+				List<BattleCharacter> battleCharacterList = acdl.executeAllSelect();
+				List<Weapon> weaponList = awdl.executeAllSelect();
+
+				request.setAttribute("bossList", bossList);
+				request.setAttribute("battleCharacterList", battleCharacterList);
+				request.setAttribute("weaponList", weaponList);
+
 				url = "/WEB-INF/delete.jsp";
 
 			} else if (adminPage.equals("情報更新")) {
+
+				AdminBossDateLogic abdl = new AdminBossDateLogic();
+				AdminCharacterDateLogic acdl = new AdminCharacterDateLogic();
+				AdminWeaponDateLogic awdl = new AdminWeaponDateLogic();
+
+				List<Boss> bossList = abdl.executeAllSelect();
+				List<BattleCharacter> battleCharacterList = acdl.executeAllSelect();
+				List<Weapon> weaponList = awdl.executeAllSelect();
+
+				request.setAttribute("bossList", bossList);
+				request.setAttribute("battleCharacterList", battleCharacterList);
+				request.setAttribute("weaponList", weaponList);
 
 				url = "/WEB-INF/update.jsp";
 

@@ -1,5 +1,7 @@
 package model;
 
+import java.util.List;
+
 import bean.Weapon;
 import dao.WeaponDAO;
 
@@ -35,6 +37,17 @@ public class AdminWeaponDateLogic {
 
 		//成否を送る
 		return propriety;
+
+	}
+
+	//武器情報の全取得
+	public List<Weapon> executeAllSelect() {
+
+		WeaponDAO weaponDAO = new WeaponDAO();
+		List<Weapon> weaponList = weaponDAO.selectAllDB();
+
+		//要素を送る
+		return weaponList;
 
 	}
 

@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import bean.Boss;
 
@@ -151,6 +153,73 @@ public class BossDAO {
 		}
 
 		return bossResult;
+
+	}
+
+	//ボス情報の全取得
+	public List<Boss> selectAllDB() {
+
+		//Selectの結果をボス情報に格納するための変数
+		List<Boss> bossList = new ArrayList<Boss>();
+
+		try {
+
+			conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
+
+			String sql = "SELECT NAME,ATTACK,HP,SPECIALATTACK FROM BOSS";
+			pStmt = conn.prepareStatement(sql);
+
+			rs = pStmt.executeQuery();
+
+			while (rs.next()) {
+
+				String name = rs.getString("NAME");
+				int attack = rs.getInt("ATTACK");
+				int hp = rs.getInt("HP");
+				String specialAttack = rs.getString("SPECIALATTACK");
+
+				Boss boss = new Boss(name, attack, hp, specialAttack);
+
+				bossList.add(boss);
+
+			}
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+
+			//closeする
+		} finally {
+			if (rs != null) {
+				try {
+
+					rs.close();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (pStmt != null) {
+				try {
+
+					pStmt.close();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (conn != null) {
+				try {
+
+					conn.close();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return bossList;
 
 	}
 

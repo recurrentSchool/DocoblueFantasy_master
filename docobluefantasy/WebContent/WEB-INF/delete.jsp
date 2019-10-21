@@ -1,7 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="bean.Boss"%>
+<%@ page import="bean.BattleCharacter"%>
+<%@ page import="bean.Weapon"%>
+<%@ page import="java.util.List"%>
 <%
 	String message = (String) request.getAttribute("message");
+	List<Boss> bossList = (List<Boss>) request.getAttribute("bossList");
+	List<BattleCharacter> battleCharacterList = (List<BattleCharacter>) request.getAttribute("battleCharacterList");
+	List<Weapon> weaponList = (List<Weapon>) request.getAttribute("weaponList");
 %>
 <!DOCTYPE html>
 <html>
@@ -16,21 +23,14 @@
 <br>
 
 <header>
-<div align="center">
-<h1>DOCOBLUEFANTASY攻略</h1>
-<hr>
-</div>
-
-<div align="center">
-<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
-</div>
+	<div align="center">
+		<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
+	</div>
+	<hr>
 </header>
 
 <div align="center">
-<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150" >
-</div>
-<div align="center">
-<hr>
+
 
 <%
 	if (message != null) {
@@ -41,23 +41,35 @@
 %>
 
 <form action="/docobluefantasy/AdminFunctionServlet" method="post">
-<input type="hidden" name="functionPage" value="delete">
-<input type="hidden" name="pageMove" value="confirmation">
+	<input type="hidden" name="functionPage" value="delete">
+	<input type="hidden" name="pageMove" value="confirmation">
 
-削除する種類と項目名を入力してください<br>
-<select name="contentsSelect">
-	<option value="weapon">武器</option>
-	<option value="character">キャラクター</option>
-	<option value="boss">ボス</option>
-</select>
-<br>
-名前:<input type="text" name="deleteName">
-<br>
-<input type="submit"  name="delete" value="確定">
-<br>
-<br>
-<br>
-<input type="button" onclick="location.href='/docobluefantasy/AdminFunctionServlet'"value="戻る">
+	<p>削除する種類と項目名を入力してください<br></p>
+	<p>(必ず種類と項目を一致させてください)<br></p>
+	<br>
+	<select name="contentsSelect">
+		<option value="weapon">武器</option>
+		<option value="character">キャラクター</option>
+		<option value="boss">ボス</option>
+	</select>
+
+	<select name="deleteName">
+		<% for(Weapon weapon : weaponList){ %>
+			<option value="<%= weapon.getName() %>">武器:<%= weapon.getName() %></option>
+		<% } %>
+		<% for(BattleCharacter battleCharacter : battleCharacterList){ %>
+			<option value="<%= battleCharacter.getName() %>">キャラクター:<%= battleCharacter.getName() %></option>
+		<% } %>
+		<% for(Boss boss : bossList){ %>
+			<option value="<%= boss.getName() %>">ボス:<%= boss.getName() %></option>
+		<% } %>
+	</select>
+	<br>
+	<input type="submit"  name="delete" value="確定">
+	<br>
+	<br>
+	<br>
+	<input type="button" onclick="location.href='/docobluefantasy/AdminFunctionServlet'"value="戻る">
 
 </form>
 <hr>

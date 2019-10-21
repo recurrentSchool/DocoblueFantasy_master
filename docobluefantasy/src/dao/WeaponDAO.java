@@ -164,6 +164,72 @@ public class WeaponDAO {
 
 	}
 
+	//武器情報の全取得
+	public List<Weapon> selectAllDB() {
+
+		//Selectの結果を武器情報に格納するための変数
+		List<Weapon> weaponList = new ArrayList<Weapon>();
+
+		try {
+
+			conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
+
+			String sql = "SELECT NAME,ATTACK,SKILL FROM WEAPON";
+			pStmt = conn.prepareStatement(sql);
+
+			rs = pStmt.executeQuery();
+
+			while (rs.next()) {
+
+				String name = rs.getString("NAME");
+				int attack = rs.getInt("ATTACK");
+				String skill = rs.getString("SKILL");
+
+				Weapon weapon = new Weapon(name, attack, skill);
+
+				weaponList.add(weapon);
+
+			}
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+
+			//closeする
+		} finally {
+			if (rs != null) {
+				try {
+
+					rs.close();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (pStmt != null) {
+				try {
+
+					pStmt.close();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (conn != null) {
+				try {
+
+					conn.close();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return weaponList;
+
+	}
+
 	//武器情報のランダム取得
 	public List<Weapon> selectRandomDB() {
 

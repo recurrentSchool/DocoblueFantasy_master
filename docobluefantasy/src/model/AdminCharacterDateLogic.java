@@ -1,5 +1,7 @@
 package model;
 
+import java.util.List;
+
 import bean.BattleCharacter;
 import dao.CharacterDAO;
 
@@ -35,6 +37,17 @@ public class AdminCharacterDateLogic {
 
 		//成否を送る
 		return propriety;
+
+	}
+
+	//キャラクター情報の全取得
+	public List<BattleCharacter> executeAllSelect() {
+
+		CharacterDAO characterDAO = new CharacterDAO();
+		List<BattleCharacter> battleCharacterList = characterDAO.selectAllDB();
+
+		//要素を送る
+		return battleCharacterList;
 
 	}
 

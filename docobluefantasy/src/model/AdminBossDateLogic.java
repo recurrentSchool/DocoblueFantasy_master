@@ -1,5 +1,7 @@
 package model;
 
+import java.util.List;
+
 import bean.Boss;
 import dao.BossDAO;
 
@@ -35,6 +37,17 @@ public class AdminBossDateLogic {
 
 		//成否を送る
 		return propriety;
+
+	}
+
+	//ボス情報の全取得
+	public List<Boss> executeAllSelect() {
+
+		BossDAO bossDAO = new BossDAO();
+		List<Boss> bossList = bossDAO.selectAllDB();
+
+		//要素を送る
+		return bossList;
 
 	}
 
