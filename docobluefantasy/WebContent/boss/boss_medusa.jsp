@@ -17,11 +17,15 @@
 <header>
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50">
 </header>
-
+<div class="main_content">
+<div class="image">
 <div align="center">
-<img src="${pageContext.request.contextPath}/image/boss/Medusa.png" width="400" height="350" alt="メドゥーサの画像">
-
-<div class="table">
+<img src="${pageContext.request.contextPath}/image/boss/Medusa.png" width="480" height="420" alt="メドゥーサの画像">
+</div>
+</div>
+</div>
+<div class="main_visual">
+<div class="boss">
 	<table>
 			<tr>
 				<th>名前：</th>
@@ -32,21 +36,19 @@
 				<td align="center"><%= boss.getAttack()%></td>
 			</tr>
 			<tr>
-				<th>HP:</th>
+				<th>HP：</th>
 				<td align="center"><%= boss.getHp()%></td>
 			</tr>
 			<tr>
 				<th>特殊攻撃：</th>
 				<td align="center"><%= boss.getSpecialAttack()%></td>
+
 			</tr>
 		</table>
-
 </div>
-<br>
-<div class="header">
+</div>
+<div class="footer">
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
-</div>
-
 </body>
 </html>

@@ -17,11 +17,15 @@
 <header>
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50">
 </header>
-
+<div class="main_content">
+<div class="image">
 <div align="center">
-<img src="${pageContext.request.contextPath}/image/character/lakham.png" width="400" height="350" alt="ラカムの画像">
-
-<div class="table">
+<img src="${pageContext.request.contextPath}/image/character/lakham.png" width="560" height="490" alt="ラカムの画像">
+</div>
+</div>
+</div>
+<div class="main_visual">
+<div class="character">
 	<table>
 			<tr>
 				<th>名前：</th>
@@ -48,13 +52,10 @@
 				<td align="center"><%= chara.getEvaluation()%></td>
 			</tr>
 		</table>
-
 </div>
-<br>
-<div class="header">
+</div>
+<div class="footer">
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
-</div>
-
 </body>
 </html>

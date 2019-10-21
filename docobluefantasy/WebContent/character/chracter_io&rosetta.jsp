@@ -17,44 +17,45 @@
 <header>
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50">
 </header>
-
+<div class="main_content">
+<div class="image">
 <div align="center">
-<img src="${pageContext.request.contextPath}/image/character/io&rosetta.png" width="400" height="350" alt="ロゼッタの画像">
-
-<div class="table">
+<img src="${pageContext.request.contextPath}/image/character/io&rosetta.png" width="560" height="490" alt="ロゼッタの画像">
+</div>
+</div>
+</div>
+<div class="main_visual">
+<div class="character">
 	<table>
 			<tr>
-				<th>名前</th>
+				<th>名前：</th>
 				<td align="center"><%= chara.getName()%></td>
 			</tr>
 			<tr>
-				<th>レアリティ</th>
+				<th>レアリティ：</th>
 				<td align="center"><%= chara.getRarity()%></td>
 			</tr>
 			<tr>
-				<th>攻撃力</th>
+				<th>攻撃力：</th>
 				<td align="center"><%= chara.getAttack()%></td>
 			</tr>
 			<tr>
-				<th>HP</th>
+				<th>HP：</th>
 				<td align="center"><%= chara.getHp()%></td>
 			</tr>
 			<tr>
-				<th>スキル</th>
+				<th>スキル：</th>
 				<td align="center"><%= chara.getSkill()%></td>
 			</tr>
 			<tr>
-				<th>評価</th>
+				<th>評価：</th>
 				<td align="center"><%= chara.getEvaluation()%></td>
 			</tr>
 		</table>
-
 </div>
-<br>
-<div class="header">
+</div>
+<div class="footer">
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
-</div>
-
 </body>
 </html>

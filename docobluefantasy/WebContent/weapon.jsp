@@ -50,8 +50,9 @@
 </div>
 
 <hr>
+<div align="center">
 	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
-
+</div>
 
 </body>
 </html>

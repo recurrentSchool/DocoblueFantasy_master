@@ -10,6 +10,9 @@
 <head>
 <meta charset="UTF-8">
 <title>マイページ</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/mypage.css">
 </head>
 
 
@@ -28,31 +31,26 @@
 </div>
 </header>
 
-	<table border="1" >
-
+	<table>
 			<tr>
 				<th>ユーザー名</th>
 				<td align="center"><%= user.getName()%></td>
 			</tr>
 			<tr>
 				<th>総課金額</th>
-				<td align="center"><%= user.getBilling()%></td>
+				<td align="center"><%= user.getBilling()%>円</td>
 			</tr>
-
-
 		</table>
-
-
-
 		<br>
 		<div align="center">
-		<table border="1" bgcolor="#FFFFFF">
-		<tr>
-		<th><a href="/docobluefantasy/main.jsp"><font color="#0000CC">戻る</font></a></th>
-		</tr>
-		</table>
+		<a href="/docobluefantasy/main.jsp"><b><font size="3" color="#0000CC">戻る</font></b></a>
 		</div>
-</div>
+		<br>
+<div align="center">
+			<form action="/docobluefantasy/ContentsServlet" method="post">
+			<input class="submit_button" type="submit" name="submit" value="ログアウト">
+			</form>
+		</div>
 <hr>
 <div align="center">
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>

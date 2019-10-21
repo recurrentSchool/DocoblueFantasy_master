@@ -25,7 +25,7 @@
 </div>
 </div>
 <div class="main_visual">
-<div class="table">
+<div class="character">
 	<table>
 			<tr>
 				<th>名前：</th>

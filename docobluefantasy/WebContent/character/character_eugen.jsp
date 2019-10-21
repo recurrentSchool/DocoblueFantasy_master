@@ -25,7 +25,7 @@
 </div>
 </div>
 <div class="main_visual">
-<div class="table">
+<div class="character">
 	<table>
 			<tr>
 				<th>名前：</th>
@@ -55,7 +55,7 @@
 
 </div>
 </div>
-<div class="header">
+<div class="footer">
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
 </body>
