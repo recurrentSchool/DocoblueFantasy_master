@@ -108,18 +108,18 @@
 </script>
 
 <table border="1" width="300">
-<tr>
-<td>
-<script>
-document.write(output);
-</script>
-</td>
-</tr>
+	<tr>
+		<td>
+			<script>
+				document.write(output);
+			</script>
+		</td>
+	</tr>
 </table>
 
-<a href="/docobluefantasy/registar.jsp">会員登録</a>
+	<a href="/docobluefantasy/registar.jsp">会員登録</a>
 </div>
-<a href="/docobluefantasy/login.jsp">ログイン</a>
+	<a href="/docobluefantasy/login.jsp">ログイン</a>
 </div>
 	<hr>
 

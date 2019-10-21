@@ -4,30 +4,28 @@
 <html>
 
 <head>
-<meta charset="UTF-8">
-<title>DOCOBLE FANTASY(仮)メインページ</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+	<meta charset="UTF-8">
+	<title>DOCOBLE FANTASY(仮)メインページ</title>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 
 <body>
-
 <br>
-
 <header>
-<div align="center">
-<h1>DOCOBLUEFANTASY攻略</h1>
-<hr>
-</div>
+	<div align="center">
+		<h1>DOCOBLUEFANTASY攻略</h1>
+		<hr>
+	</div>
 
-<div align="center">
-<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
-</div>
+	<div align="center">
+		<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
+	</div>
 </header>
 
 <hr>
 <div align="right">
-<a href="/docobluefantasy/mypage.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/myPage.png"></a>
+	<a href="/docobluefantasy/mypage.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/myPage.png"></a>
 </div>
 <script type="text/javascript">
 
@@ -41,24 +39,24 @@
 </script>
 
 <div align="center">
-<table border="1"  width="280" height="100" bordercolor="#000000">
-<tr><td ><a href="/docobluefantasy/weapon.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/omegasword.png"></a></td>
-<td><a href="/docobluefantasy/character.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/mizugizoi.png"></a></td>
-<td><a href="/docobluefantasy/boss.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/shiva.png"></a></td>
-<td><a href="/docobluefantasy/gacha.jsp"><script>document.write(output);</script></a></td></tr>
-<tr ><th bgcolor="#FFFFFF"><font face="arial black">武器</font></th>
-<th bgcolor="#FFFFFF"><font face="arial black">キャラクター</font></th>
-<th bgcolor="#FFFFFF"><font face="arial black">ボス</font></th>
-<th bgcolor="#FFFFFF"><font face="arial black">ガチャシュミレーター</font></th>
-</tr>
-</table>
-<hr>
-<div align="right">
-<form action="/docobluefantasy/ContentsServlet" method="post">
-<input class="submit_button" type="submit" value="ログアウト">
-</form>
-</div>
-<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+	<table border="1"  width="280" height="100" bordercolor="#000000">
+		<tr><td ><a href="/docobluefantasy/weapon.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/omegasword.png"></a></td>
+			<td><a href="/docobluefantasy/character.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/mizugizoi.png"></a></td>
+			<td><a href="/docobluefantasy/boss.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/shiva.png"></a></td>
+			<td><a href="/docobluefantasy/gacha.jsp"><script>document.write(output);</script></a></td></tr>
+		<tr><th bgcolor="#FFFFFF"><font face="arial black">武器</font></th>
+			<th bgcolor="#FFFFFF"><font face="arial black">キャラクター</font></th>
+			<th bgcolor="#FFFFFF"><font face="arial black">ボス</font></th>
+			<th bgcolor="#FFFFFF"><font face="arial black">ガチャシュミレーター</font></th>
+		</tr>
+		</table>
+		<hr>
+		<div align="right">
+			<form action="/docobluefantasy/ContentsServlet" method="post">
+			<input class="submit_button" type="submit" value="ログアウト">
+			</form>
+		</div>
+	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
 <hr>
 </body>

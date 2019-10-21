@@ -55,7 +55,6 @@
 	<p>ホーム画面に戻るには「戻る」を</p>
 	<br>
 	<a href="/docobluefantasy/index.jsp">戻る</a>
-
 <hr>
 
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
