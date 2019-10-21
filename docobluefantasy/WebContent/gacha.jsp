@@ -2,41 +2,35 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-
 <head>
-	<meta charset="UTF-8">
-	<title>ガチャ画面</title>
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/gacha.css">
+<meta charset="UTF-8">
+<title>DOCOBLE FANTASY(仮) | ガチャ画面</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/gacha.css">
 </head>
-
 <body>
-
-<br>
-
 <header>
-	<div align="center">
-	<h1>DOCOBLUEFANTASY攻略</h1>
-	<hr>
-	</div>
-
-	<div align="center">
-	<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
-	</div>
-</header>
-
-<div align="center">
-	<h2>ガチャシミュレーション</h2>
-	<br>
-	<form action="/docobluefantasy/GachaServlet" method="post">
-		<input type="image" src="${pageContext.request.contextPath}/image/gacha/gacha.gif"><br>
-		<input type="image" src="${pageContext.request.contextPath}/image/gacha/gachaBTN.png" width="140" height="70">
-	</form>
+<div align="left">
+<a href="/docobluefantasy/main.jsp"><input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50"></a>
+<a href="/docobluefantasy/weapon.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/weaponicon.png" width="100" height="50"></a>
+<a href="/docobluefantasy/character.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/charactericon.png" width="200" height="50"></a>
+<a href="/docobluefantasy/boss.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/bossicon.png" width="100" height="50"></a>
+<a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/gachaicon.png" width="200" height="50"></a>
 </div>
-
+</header>
 <div align="center">
-	<hr>
-	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+<form action="/docobluefantasy/GachaServlet" method="post">
+<input type="image" src="${pageContext.request.contextPath}/image/gacha/gacha.gif"><br>
+<input type="image" src="${pageContext.request.contextPath}/image/gacha/gachaBTN.png" width="140" height="70">
+
+
+	<table border="1" bgcolor="#FFFFFF">
+		<tr>
+			<th><a href="/docobluefantasy/main.jsp"><font color="#0000CC">戻る</font></a></th>
+		</tr>
+	</table>
+
+</form>
 </div>
 
 </body>
