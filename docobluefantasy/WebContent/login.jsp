@@ -41,7 +41,7 @@
 		<table border="1">
 			<tr>
 				<th bgcolor="#99CCFF">名前</th>
-				<td><input type="text" name="name" required></td>
+				<td><input type="text" name="name" maxlength="20" required></td>
 			</tr>
 			<tr>
 				<th bgcolor="#99CCFF">パスワード</th>

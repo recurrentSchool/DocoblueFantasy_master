@@ -44,7 +44,7 @@
 		<table border="1" >
 			<tr>
 				<th bgcolor="#99CCFF">名前</th>
-				<td><input type="text" name="name" required></td>
+				<td><input type="text" name="name" maxlength="20" required></td>
 			</tr>
 
 			<tr>
@@ -53,11 +53,11 @@
 			</tr>
 			<tr>
 				<th bgcolor="#99CCFF">パスワード</th>
-				<td><input type="password" name="pass" id="pass1" required></td>
+				<td><input type="password" name="pass" id="pass1" maxlength="16" required></td>
 			</tr>
 			<tr>
 				<th bgcolor="#99CCFF" width="120" height="10">パスワード確認</th>
-				<td><input type="password" name="pass" id="pass2" required></td><!-- class="conf" -->
+				<td><input type="password" name="pass" id="pass2" maxlength="16" required></td>
 		</table>
 		<p><input type="submit" value="登録"></p>
 	</form>
