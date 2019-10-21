@@ -5,3 +5,112 @@ body {
 	background-position: top center;
 	background-size: cover;
 }
+
+h1,p {
+	margin: 15px auto;
+}
+
+p#errorMsg {
+	padding:12px;
+	font-weight:850;
+	color:#262626;
+	background:#FFEBE8;
+	border:2px solid #990000;
+}
+
+h3 {
+	padding: 5px 0px;
+}
+
+div#boxDiv {
+  width: 50%;
+  background: #ffffff;
+  border: 3px solid red;
+
+}
+
+form#delete{
+  width: 30%;
+  background: #ffffff;
+  border: 3px solid red;
+}
+
+div#delete {
+  padding: 5px 0px;
+  background: #eff7ff;
+}
+
+div#selectBlock{
+  padding:15px 0px;
+}
+
+details {
+  width:50%;
+  height: 30px;
+  transition: .5s;
+}
+
+details[open] {
+  height: 210px;
+  border: 3px solid #cccccc;
+  background: #ea5550;
+}
+
+details[open]#weapon {
+  height: 140px;
+  border: 3px solid #cccccc;
+  background: #ea5550;
+}
+
+details[open]#boss {
+  height: 160px;
+  border: 3px solid #cccccc;
+  background: #ea5550;
+}
+
+details[open]#weaponUpdate {
+  height: 190px;
+  border: 3px solid #cccccc;
+  background: #ea5550;
+}
+
+details[open]#characterUpdate {
+  height: 250px;
+  border: 3px solid #cccccc;
+  background: #ea5550;
+}
+
+details[open]#bossUpdate {
+  height: 210px;
+  border: 3px solid #cccccc;
+  background: #ea5550;
+}
+
+details summary {
+  list-style: none;
+  cursor: pointer;
+  background-color:#fafdff;
+  border: 3px solid #cccccc;
+  padding:1% auto;
+}
+
+/**
+ * Chrome用のデフォルト三角削除
+**/
+details summary::-webkit-details-marker {
+  display: none;
+}
+/**
+ * Font Awesomeのプラスアイコン使用
+**/
+details summary::before {
+  font-family: FontAwesome;
+  content: '\f067';
+  margin-right: 20px;
+}
+/**
+ * アコーディオンがオープン時はマイナスアイコンに変更
+**/
+details[open] summary::before {
+  content: '\f068';
+}

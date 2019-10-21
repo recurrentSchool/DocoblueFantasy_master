@@ -128,6 +128,18 @@ public class AdminFunctionServlet extends HttpServlet {
 		//確認画面へ遷移する動作
 		if (pageMove.equals("confirmation")) {
 
+			AdminBossDateLogic abdl = new AdminBossDateLogic();
+			AdminCharacterDateLogic acdl = new AdminCharacterDateLogic();
+			AdminWeaponDateLogic awdl = new AdminWeaponDateLogic();
+
+			List<Boss> bossList = abdl.executeAllSelect();
+			List<BattleCharacter> battleCharacterList = acdl.executeAllSelect();
+			List<Weapon> weaponList = awdl.executeAllSelect();
+
+			request.setAttribute("bossList", bossList);
+			request.setAttribute("battleCharacterList", battleCharacterList);
+			request.setAttribute("weaponList", weaponList);
+
 			String weaponName = (String) request.getParameter("weaponName");
 			String weaponAttack = (String) request.getParameter("weaponAttack");
 			String weaponSkill = (String) request.getParameter("weaponSkill");
@@ -188,61 +200,61 @@ public class AdminFunctionServlet extends HttpServlet {
 				String contentsSelect = (String) request.getParameter("contentsSelect");
 				String deleteName = (String) request.getParameter("deleteName");
 
-				if (contentsSelect.equals("weapon")) {
+					if (contentsSelect.equals("weapon")) {
 
-					ContentsWeaponSelectLogic cwsl = new ContentsWeaponSelectLogic();
+						ContentsWeaponSelectLogic cwsl = new ContentsWeaponSelectLogic();
 
-					Weapon weapon = cwsl.executeSelect(deleteName);
+						Weapon weapon = cwsl.executeSelect(deleteName);
 
-					if (weapon != null) {
+						if (weapon != null) {
 
-						request.setAttribute("weapon", weapon);
-						url = "/WEB-INF/confirmation_delete.jsp";
+							request.setAttribute("weapon", weapon);
+							url = "/WEB-INF/confirmation_delete.jsp";
 
-					} else {
+						} else {
 
-						message = "該当する武器はありません";
-						url = "/WEB-INF/delete.jsp";
+							message = "該当する武器はありません";
+							url = "/WEB-INF/delete.jsp";
+
+						}
+
+					} else if (contentsSelect.equals("character")) {
+
+						ContentsCharacterSelectLogic ccsl = new ContentsCharacterSelectLogic();
+
+						BattleCharacter character = ccsl.executeSelect(deleteName);
+
+						if (character != null) {
+
+							request.setAttribute("character", character);
+							url = "/WEB-INF/confirmation_delete.jsp";
+
+						} else {
+
+							message = "該当するキャラクターはいません";
+							url = "/WEB-INF/delete.jsp";
+
+						}
+
+					} else if (contentsSelect.equals("boss")) {
+
+						ContentsBossSelectLogic cbsl = new ContentsBossSelectLogic();
+
+						Boss boss = cbsl.executeSelect(deleteName);
+
+						if (boss != null) {
+
+							request.setAttribute("boss", boss);
+							url = "/WEB-INF/confirmation_delete.jsp";
+
+						} else {
+
+							message = "該当する武器はありません";
+							url = "/WEB-INF/delete.jsp";
+
+						}
 
 					}
-
-				} else if (contentsSelect.equals("character")) {
-
-					ContentsCharacterSelectLogic ccsl = new ContentsCharacterSelectLogic();
-
-					BattleCharacter character = ccsl.executeSelect(deleteName);
-
-					if (character != null) {
-
-						request.setAttribute("character", character);
-						url = "/WEB-INF/confirmation_delete.jsp";
-
-					} else {
-
-						message = "該当するキャラクターはいません";
-						url = "/WEB-INF/delete.jsp";
-
-					}
-
-				} else if (contentsSelect.equals("boss")) {
-
-					ContentsBossSelectLogic cbsl = new ContentsBossSelectLogic();
-
-					Boss boss = cbsl.executeSelect(deleteName);
-
-					if (boss != null) {
-
-						request.setAttribute("boss", boss);
-						url = "/WEB-INF/confirmation_delete.jsp";
-
-					} else {
-
-						message = "該当する武器はありません";
-						url = "/WEB-INF/delete.jsp";
-
-					}
-
-				}
 
 				//上書き時確認画面表示用処理
 			} else if (functionPage.equals("update")) {
@@ -251,78 +263,95 @@ public class AdminFunctionServlet extends HttpServlet {
 				String characterOriginalName = (String) request.getParameter("characterOriginalName");
 				String bossOriginalName = (String) request.getParameter("bossOriginalName");
 
-				//武器が上書き対象にある時
-				if (!weaponOriginalName.isEmpty()) {
+				try {
 
-					ContentsWeaponSelectLogic cwsl = new ContentsWeaponSelectLogic();
-					Weapon weaponOriginal = cwsl.executeSelect(weaponOriginalName);
+					//武器が上書き対象にある時
+					if (!weaponOriginalName.isEmpty() && !weaponName.isEmpty() && !weaponSkill.isEmpty()) {
 
-					int weaponAttackInteger = Integer.parseInt(weaponAttack);
-					Weapon weaponUpdate = new Weapon(weaponName, weaponAttackInteger, weaponSkill);
+						ContentsWeaponSelectLogic cwsl = new ContentsWeaponSelectLogic();
+						Weapon weaponOriginal = cwsl.executeSelect(weaponOriginalName);
 
-					if (weaponOriginal != null) {
+						int weaponAttackInteger = Integer.parseInt(weaponAttack);
+						Weapon weaponUpdate = new Weapon(weaponName, weaponAttackInteger, weaponSkill);
 
-						request.setAttribute("weaponOriginal", weaponOriginal);
-						request.setAttribute("weaponUpdate", weaponUpdate);
-						url = "/WEB-INF/confirmation_update.jsp";
+						if (weaponOriginal != null) {
+
+							request.setAttribute("weaponOriginal", weaponOriginal);
+							request.setAttribute("weaponUpdate", weaponUpdate);
+							url = "/WEB-INF/confirmation_update.jsp";
+
+						} else {
+
+							message = "該当する武器が見つかりませんでした";
+							url = "/WEB-INF/update.jsp";
+
+						}
+
+						//キャラクターが上書き対象にある時
+					} else if (!characterOriginalName.isEmpty() && !characterName.isEmpty()
+							&& !characterRarity.isEmpty() && !characterAttack.isEmpty()
+							&& !characterHp.isEmpty() && !characterSkill.isEmpty() && !characterEvaluation.isEmpty()) {
+
+						ContentsCharacterSelectLogic ccsl = new ContentsCharacterSelectLogic();
+						BattleCharacter characterOriginal = ccsl.executeSelect(characterOriginalName);
+
+						int characterAttackInteger = Integer.parseInt(characterAttack);
+						int characterHpInteger = Integer.parseInt(characterHp);
+						int characterEvaluationInteger = Integer.parseInt(characterEvaluation);
+
+						BattleCharacter characterUpdate = new BattleCharacter(characterName, characterRarity,
+								characterAttackInteger, characterHpInteger,
+								characterSkill, characterEvaluationInteger);
+
+						if (characterOriginal != null) {
+
+							request.setAttribute("characterOriginal", characterOriginal);
+							request.setAttribute("characterUpdate", characterUpdate);
+							url = "/WEB-INF/confirmation_update.jsp";
+
+						} else {
+
+							message = "該当するキャラクターが見つかりませんでした";
+							url = "/WEB-INF/update.jsp";
+
+						}
+
+						//ボスが上書き対象にある時
+					} else if (!bossOriginalName.isEmpty() && !bossName.isEmpty()
+							&& !bossAttack.isEmpty() && !bossHp.isEmpty() && !bossSpecialAttack.isEmpty()) {
+
+						ContentsBossSelectLogic cbsl = new ContentsBossSelectLogic();
+						Boss bossOriginal = cbsl.executeSelect(bossOriginalName);
+
+						int bossAttackInteger = Integer.parseInt(bossAttack);
+						int bossHpInteger = Integer.parseInt(bossHp);
+
+						Boss bossUpdate = new Boss(bossName, bossAttackInteger, bossHpInteger, bossSpecialAttack);
+
+						if (bossOriginal != null) {
+
+							request.setAttribute("bossOriginal", bossOriginal);
+							request.setAttribute("bossUpdate", bossUpdate);
+							url = "/WEB-INF/confirmation_update.jsp";
+
+						} else {
+
+							message = "該当するボスが見つかりませんでした";
+							url = "/WEB-INF/update.jsp";
+
+						}
 
 					} else {
 
-						message = "該当する武器が見つかりませんでした";
+						message = "テキストボックスに文字が入力されていません";
 						url = "/WEB-INF/update.jsp";
 
 					}
 
-					//キャラクターが上書き対象にある時
-				} else if (!characterOriginalName.isEmpty()) {
+				} catch (NumberFormatException e) {
 
-					ContentsCharacterSelectLogic ccsl = new ContentsCharacterSelectLogic();
-					BattleCharacter characterOriginal = ccsl.executeSelect(characterOriginalName);
-
-					int characterAttackInteger = Integer.parseInt(characterAttack);
-					int characterHpInteger = Integer.parseInt(characterHp);
-					int characterEvaluationInteger = Integer.parseInt(characterEvaluation);
-
-					BattleCharacter characterUpdate = new BattleCharacter(characterName, characterRarity,
-							characterAttackInteger, characterHpInteger,
-							characterSkill, characterEvaluationInteger);
-
-					if (characterOriginal != null) {
-
-						request.setAttribute("characterOriginal", characterOriginal);
-						request.setAttribute("characterUpdate", characterUpdate);
-						url = "/WEB-INF/confirmation_update.jsp";
-
-					} else {
-
-						message = "該当するキャラクターが見つかりませんでした";
-						url = "/WEB-INF/update.jsp";
-
-					}
-
-					//ボスが上書き対象にある時
-				} else if (!bossOriginalName.isEmpty()) {
-
-					ContentsBossSelectLogic cbsl = new ContentsBossSelectLogic();
-					Boss bossOriginal = cbsl.executeSelect(bossOriginalName);
-
-					int bossAttackInteger = Integer.parseInt(bossAttack);
-					int bossHpInteger = Integer.parseInt(bossHp);
-
-					Boss bossUpdate = new Boss(bossName, bossAttackInteger, bossHpInteger, bossSpecialAttack);
-
-					if (bossOriginal != null) {
-
-						request.setAttribute("bossOriginal", bossOriginal);
-						request.setAttribute("bossUpdate", bossUpdate);
-						url = "/WEB-INF/confirmation_update.jsp";
-
-					} else {
-
-						message = "該当するボスが見つかりませんでした";
-						url = "/WEB-INF/update.jsp";
-
-					}
+					message = "数値対応のテキストボックスに空白が入力されました";
+					url = "/WEB-INF/update.jsp";
 
 				}
 

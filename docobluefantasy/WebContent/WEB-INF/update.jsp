@@ -35,17 +35,17 @@
 	<%
 		if (message != null) {
 	%>
-		<p> <%= message %> </p>
+		<p id="errorMsg"> <%= message %> </p>
 	<%
 		}
 	%>
-
+<div id="boxDiv">
 	<h1>上書きするコンテンツを、[武器]、[キャラクター]、[ボス]から1つ選んでください。</h1>
 
 	<form action="/docobluefantasy/AdminFunctionServlet" method="post">
 		<input type="hidden" name="functionPage" value="update">
 		<input type="hidden" name="pageMove" value="confirmation">
-		<details>
+		<details id="weaponUpdate">
 			<summary>武器</summary>
 			<h3>上書き対象の武器名</h3>
 			<!-- <input type="text" maxlength="20" name="weaponOriginalName"> -->
@@ -67,7 +67,7 @@
 			<br>
 		</details>
 
-		<details>
+		<details id="characterUpdate">
 			<summary>キャラクター</summary>
 
 			<h3>上書き対象のキャラクター名</h3>
@@ -80,7 +80,6 @@
 			</select>
 			<br>
 			<h3>上書きする内容</h3>
-			<br>
 			　　名前　：<input type="text" maxlength="20" name="characterName">
 			<br>
 			レアリティ：<select name="characterRarity">
@@ -114,7 +113,7 @@
 			<br>
 		</details>
 
-		<details>
+		<details id="bossUpdate">
 			<summary>ボス</summary>
 			<h3>上書き対象のボス名</h3>
 
@@ -127,7 +126,6 @@
 			</select>
 			<br>
 			<h3>上書きする内容</h3>
-			<br>
 			　　名前　：<input type="text" maxlength="20" name="bossName">
 			<br>
 			　攻撃力　：<input type="text" maxlength="10" pattern="[1-9]|[1-9][0-9]{1,8}|1000000000" name="bossAttack">
@@ -142,6 +140,7 @@
 		<br>
 		<input type="button" onclick="location.href='/docobluefantasy/AdminFunctionServlet'"value="戻る">
 	</form>
+</div>
 	<hr>
 	<p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
 </div>

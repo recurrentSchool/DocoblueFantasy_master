@@ -35,42 +35,40 @@
 <%
 	if (message != null) {
 %>
-	<p> <%= message %> </p>
+	<p id="errorMsg"> <%= message %> </p>
 <%
 	}
 %>
 
-<form action="/docobluefantasy/AdminFunctionServlet" method="post">
+<form action="/docobluefantasy/AdminFunctionServlet" method="post"id="delete">
 	<input type="hidden" name="functionPage" value="delete">
 	<input type="hidden" name="pageMove" value="confirmation">
 
-	<p>削除する種類と項目名を入力してください<br></p>
-	<p>(必ず種類と項目を一致させてください)<br></p>
-	<br>
-	<select name="contentsSelect">
-		<option value="weapon">武器</option>
-		<option value="character">キャラクター</option>
-		<option value="boss">ボス</option>
-	</select>
+	<h1>削除する種類と項目名を入力してください<br>
+	(必ず種類と項目を一致させてください)</h1>
+	<div id="delete">
+		<div id="selectBlock">
+			<select name="contentsSelect">
+				<option value="weapon">武器</option>
+				<option value="character">キャラクター</option>
+				<option value="boss">ボス</option>
+			</select>
 
-	<select name="deleteName">
-		<% for(Weapon weapon : weaponList){ %>
-			<option value="<%= weapon.getName() %>">武器:<%= weapon.getName() %></option>
-		<% } %>
-		<% for(BattleCharacter battleCharacter : battleCharacterList){ %>
-			<option value="<%= battleCharacter.getName() %>">キャラクター:<%= battleCharacter.getName() %></option>
-		<% } %>
-		<% for(Boss boss : bossList){ %>
-			<option value="<%= boss.getName() %>">ボス:<%= boss.getName() %></option>
-		<% } %>
-	</select>
-	<br>
-	<input type="submit"  name="delete" value="確定">
-	<br>
-	<br>
-	<br>
-	<input type="button" onclick="location.href='/docobluefantasy/AdminFunctionServlet'"value="戻る">
-
+			<select name="deleteName">
+				<% for(Weapon weapon : weaponList){ %>
+					<option value="<%= weapon.getName() %>">武器:<%= weapon.getName() %></option>
+				<% } %>
+				<% for(BattleCharacter battleCharacter : battleCharacterList){ %>
+					<option value="<%= battleCharacter.getName() %>">キャラクター:<%= battleCharacter.getName() %></option>
+				<% } %>
+				<% for(Boss boss : bossList){ %>
+					<option value="<%= boss.getName() %>">ボス:<%= boss.getName() %></option>
+				<% } %>
+			</select>
+		</div>
+		<input type="submit"  name="delete" value="確定">
+		<input type="button" onclick="location.href='/docobluefantasy/AdminFunctionServlet'"value="戻る">
+	</div>
 </form>
 <hr>
 <p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
