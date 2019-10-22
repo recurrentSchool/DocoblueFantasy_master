@@ -5,3 +5,7 @@ body {
 	background-position: top center;
 	background-size: cover;
 }
+ header {
+background-color: #c0c0c0;
+opacity: 1.0;
+}

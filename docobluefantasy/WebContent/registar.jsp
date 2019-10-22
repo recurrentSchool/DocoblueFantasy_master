@@ -10,26 +10,18 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 
-<script type="text/javascript" src="js/registar.js"></script>
+
+<script type="text/javascript" src="JS/registar.js"></script>
 
 </head>
 
 <body>
-
-<br>
-
-<div align="center">
-<h1>DOCOBLUEFANTASY攻略</h1>
-<hr>
-</div>
-
 <header>
-<div align="center">
-<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
+<div align="left">
+<a href="/docobluefantasy/index.jsp"><input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50"></a>
 </div>
 </header>
 <br>
-<hr>
 <div align="center">
 <%
 	if(message != null){
@@ -38,7 +30,6 @@
 <%
 	}
 %>
-<br>
 	<form action="/docobluefantasy/RegisterServlet" method="POST" onSubmit="return CheckPass()">
 	<input type="hidden" name="admin" value="1">
 		<table border="1" >
@@ -46,7 +37,6 @@
 				<th bgcolor="#99CCFF">名前</th>
 				<td><input type="text" name="name" maxlength="20" required></td>
 			</tr>
-
 			<tr>
 				<th bgcolor="#99CCFF">課金額</th>
 				<td><input type="text" name="billing" required></td>
