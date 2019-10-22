@@ -17,11 +17,15 @@
 <header>
 <input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50">
 </header>
-
+<div class="main_content">
+<div class="image">
 <div align="center">
-<img src="${pageContext.request.contextPath}/image/boss/GrandOrder.png" width="400" height="350" alt="BlueSphereの画像">
-
-<div class="table">
+<img src="${pageContext.request.contextPath}/image/boss/GrandOrder.png" width="480" height="420" alt="BlueSphereの画像">
+</div>
+</div>
+</div>
+<div class="main_visual">
+<div class="boss">
 	<table>
 			<tr>
 				<th>名前：</th>
@@ -42,17 +46,9 @@
 			</tr>
 		</table>
 </div>
-<!-- <table border="1" bgcolor="#FFFFFF">
-		<tr>
-		<th><a href="/docobluefantasy/boss.jsp"><font color="#0000CC">戻る</font></a></th>
-		</tr>
-		</table>
- -->
-<br>
-<div class="header">
+</div>
+<div class="footer">
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
-</div>
-
 </body>
 </html>

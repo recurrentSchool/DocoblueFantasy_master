@@ -9,64 +9,41 @@
 <meta charset="UTF-8">
 <title>シュヴァリエソード・マグナ詳細</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/weapon.css">
 </head>
 
 <body>
 
-<br>
-
 <header>
-<div align="center">
-<h1>DOCOBLUEFANTASY攻略</h1>
-</div>
-<hr>
-<header>
-<div align="center">
-<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150" >
-</div>
+<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50">
 </header>
-<hr>
-</div>
-
+<div class="main_content">
+<div class="image">
 <div align="center">
-<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
+<img src="${pageContext.request.contextPath}/image/weapon/LuminieraSwordOmega.png" width="480" height="420" alt="シュヴァリエソード・マグナの画像">
 </div>
-</header>
-
-<div align="center">
-<img src="${pageContext.request.contextPath}/image/weapon/LuminieraSwordOmega.png" width="400" height="350" alt="シュヴァリエソード・マグナの画像">
-
-	<table border="1" align="center" bgcolor="#FFFFFF">
+</div>
+</div>
+<div class="main_visual">
+<div class="weapon">
+	<table>
 		<tr>
-			<th>名前</th>
+			<th>名前：</th>
 			<td align="center"><%= weapon.getName()%></td>
 		</tr>
 		<tr>
-			<th>攻撃力</th>
+			<th>攻撃力：</th>
 			<td align="center"><%= weapon.getAttack()%></td>
 		</tr>
 		<tr>
-			<th>スキル</th>
+			<th>スキル：</th>
 			<td align="center"><%= weapon.getSkill()%></td>
 		</tr>
 	</table>
-
-<br>
-		<div align="center">
-		<table border="1" bgcolor="#FFFFFF">
-		<tr>
-		<th><a href="/docobluefantasy/character.jsp"><font color="#0000CC">戻る</font></a></th>
-		</tr>
-		</table>
-
-		</div>
-
-
-<hr>
-	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
-
 </div>
-<br>
+</div>
+<div class="footer">
+<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+</div>
 </body>
 </html>

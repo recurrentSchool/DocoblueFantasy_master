@@ -19,17 +19,9 @@
 <div align="center">
 	<h1>DOCOBLUEFANTASY攻略</h1>
 </div>
-<hr>
-<div align="center">
-	<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150" >
 </div>
 <hr>
-</header>
 
-<div align="center">
-<img src="${pageContext.request.contextPath}/image/weapon/Ixaba.png" width="400" height="350" alt="イクサバの画像">
-
-	<table border="1" align="center" bgcolor="#FFFFFF">
 		<tr>
 			<th>名前</th>
 			<td align="center"><%= weapon.getName()%></td>

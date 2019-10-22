@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+
+table, td, th {
+	font-size: 110%;
+	height: 25px;		/* 高さ */
+	width: 300px;		/* 横幅 */
+	padding: auto;
+	margin: auto;
+	border: 5px #d1ffff solid;
+	text-align: center;
+	vertical-align: middle;
+	border-style:ridge ridge groove groove
+}
+
+input#submit_button {
+    padding: 15px 40px;
+    font-size: 1.2em;
+    background-color: #000;
+    color: #fff;
+    border-style: none;
+}
