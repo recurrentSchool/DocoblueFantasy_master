@@ -91,6 +91,10 @@
 <div align="center">
 <footer>
 <br>
+<form action="/docobluefantasy/ContentsServlet" method="post">
+<a><input id="image" type="image" src="${pageContext.request.contextPath}/image/icon/back.png"></a>
+</form>
+<br>
 <table>
 <tr>
 <th><a href="/docobluefantasy/weapon.jsp">武器一覧　</a></th>
@@ -103,7 +107,7 @@
 </tr>
 </table>
 <br>
-	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </footer>
 </div>
 </html>

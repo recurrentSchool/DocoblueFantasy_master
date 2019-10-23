@@ -28,6 +28,14 @@ background-color: #c0c0c0;
 opacity: 1.0;
 }
 
+footer {
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+background-color:#FFFFFF;
+opacity: 1.0;
+}
+
 
 .main_visual {
     text-align:  center;        /* 文字中央揃え */
