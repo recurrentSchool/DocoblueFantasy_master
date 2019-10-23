@@ -13,7 +13,7 @@
 <header>
 <div align="left">
 <a href="/docobluefantasy/main.jsp"><input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50"></a>
-<a href="/docobluefantasy/weapon.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/weaponicon.png" width="100" height="50"></a>
+<a href="/docobluefantasy/weapon.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/weaponicon.png" width="200" height="50"></a>
 <a href="/docobluefantasy/character.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/charactericon.png" width="200" height="50"></a>
 <a href="/docobluefantasy/boss.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/bossicon.png" width="100" height="50"></a>
 <a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/gachaicon.png" width="200" height="50"></a>
@@ -48,16 +48,24 @@
 </tr>
 </table>
 <a class="twitter-timeline" data-width="400" data-height="500" data-theme="white" href="https://twitter.com/granbluefantasy?ref_src=twsrc%5Etfw">Tweets by granbluefantasy</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<hr>
-<div align="right">
+<footer>
 <form action="/docobluefantasy/ContentsServlet" method="post">
 <input class="submit_button" type="submit" value="ログアウト">
 </form>
-</div>
-<footer>
+<br>
+<table>
+<tr>
+<th><a href="/docobluefantasy/weapon.jsp">武器一覧　</a></th>
+<th>  </th>
+<th><a href="/docobluefantasy/character.jsp">キャラ一覧　</a></th>
+<th>  </th>
+<th><a href="/docobluefantasy/boss.jsp">ボス一覧　</a></th>
+<th>  </th>
+<th><a href="/docobluefantasy/gacha.jsp">ガチャシュミレーター</a></th>
+</tr>
+</table>
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </footer>
 </div>
-<hr>
 </body>
 </html>
