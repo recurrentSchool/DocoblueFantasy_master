@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮)キャラクターページ</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/characterList.css">
 </head>
 <body>
 <header>
@@ -14,10 +15,10 @@
 <a href="/docobluefantasy/weapon.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/weaponicon.png" width="200" height="50"></a>
 <a href="/docobluefantasy/character.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/charactericon.png" width="200" height="50"></a>
 <a href="/docobluefantasy/boss.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/bossicon.png" width="100" height="50"></a>
-<a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/gachaicon.png" width="200" height="50"></a>
+<a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/gachaicon.png" width="150" height="50"></a>
 </div>
 </header>
-<div align="center"><h2>キャラクター一覧</h2></div>
+<div align="center"><br><h2><font color="#FFFFFF">キャラクター一覧</font></h2><br></div>
 		<div align="center">
 		<table border="1">
 				<tr>
@@ -45,10 +46,24 @@
 		</tr>
 		</table>
 		</div>
-<hr>
+		<br>
+<footer>
 <div align="center">
-<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+<table>
+<tr>
+<th><a href="/docobluefantasy/weapon.jsp">武器一覧　</a></th>
+<th>  </th>
+<th><a href="/docobluefantasy/character.jsp">キャラ一覧　</a></th>
+<th>  </th>
+<th><a href="/docobluefantasy/boss.jsp">ボス一覧　</a></th>
+<th>  </th>
+<th><a href="/docobluefantasy/gacha.jsp">ガチャシュミレーター</a></th>
+</tr>
+</table>
+<br>
+	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
+</footer>
 
 
 </body>

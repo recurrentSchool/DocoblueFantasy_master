@@ -9,48 +9,54 @@
 <meta charset="UTF-8">
 <title>イクサバ詳細</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/weapon.css">
 </head>
-
 <body>
-<br>
-
 <header>
+<div align="left">
+<a href="/docobluefantasy/main.jsp"><input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50"></a>
+<a href="/docobluefantasy/weapon.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/weaponicon.png" width="200" height="50"></a>
+<a href="/docobluefantasy/character.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/charactericon.png" width="200" height="50"></a>
+<a href="/docobluefantasy/boss.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/bossicon.png" width="100" height="50"></a>
+<a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/gachaicon.png" width="150" height="50"></a>
+</div>
+</header>
+<div class="main_content">
+<div class="image">
 <div align="center">
-	<h1>DOCOBLUEFANTASY攻略</h1>
+<img src="${pageContext.request.contextPath}/image/weapon/Ixaba.png" width="480" height="420" alt="イクサバの画像">
 </div>
 </div>
-<hr>
-
+</div>
+<div class="main_visual">
+<div class="weapon">
+	<table>
 		<tr>
-			<th>名前</th>
+			<th>名前:</th>
 			<td align="center"><%= weapon.getName()%></td>
 		</tr>
 		<tr>
-			<th>攻撃力</th>
+			<th>攻撃力:</th>
 			<td align="center"><%= weapon.getAttack()%></td>
 		</tr>
 		<tr>
-			<th>スキル</th>
+			<th>スキル:</th>
 			<td align="center"><%= weapon.getSkill()%></td>
 		</tr>
 	</table>
-
+</div>
+</div>
 <br>
 		<div align="center">
 		<table border="1" bgcolor="#FFFFFF">
 		<tr>
-		<th><a href="/docobluefantasy/character.jsp"><font color="#0000CC">戻る</font></a></th>
+		<th><a href="/docobluefantasy/weapon.jsp"><font color="#0000CC">戻る</font></a></th>
 		</tr>
 		</table>
-
 		</div>
-
-
-<hr>
-	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
-
+		<br>
+<div class="footer">
+<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
-<br>
 </body>
 </html>
