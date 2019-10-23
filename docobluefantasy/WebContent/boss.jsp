@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮) | ボスページ</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/button.css">
 </head>
 <body>
 <header>
@@ -42,7 +43,7 @@
 		<div align="center">
 		<table border="1" bgcolor="#FFFFFF">
 		<tr>
-		<th><a href="/docobluefantasy/main.jsp"><font color="#0000CC">戻る</font></a></th>
+		<th><a href="/docobluefantasy/main.jsp"><input id="submit_button" type="button" value="戻る"></a></th>
 		</tr>
 		</table>
 		</div>

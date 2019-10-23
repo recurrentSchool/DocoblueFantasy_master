@@ -47,7 +47,9 @@
 		</table>
 		<br>
 		<div align="center">
-		<a href="/docobluefantasy/main.jsp"><b><font size="1" color="#0000CC">戻る</font></b></a>
+		<a href="/docobluefantasy/main.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/return.png" ></a>
+		<br>
+<!-- 		<a href="/docobluefantasy/main.jsp"><font color="#0000ff">戻る</font></a> -->
 		</div>
 		<br>
 <div align="center">
