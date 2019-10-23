@@ -9,6 +9,7 @@
 <title>DOCOBLE FANTASY(仮)結果表示画面ページ</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/message.css">
 </head>
 <body>
 <header>
@@ -17,12 +18,11 @@
 </div>
 </header>
 
-<div align="center">
-<p><font color="#FF0000"><%= message %></font></p>
-<p>TOPに戻るには「TOPへ」</p>
-<a href="/docobluefantasy/index.jsp">TOPへ</a>
+<div align="center" class="messagePage">
+<p><%= message %></p>
+<a href="/docobluefantasy/index.jsp" class="top">TOPへ</a>
+</div>
 <hr>
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
-</div>
 </body>
 </html>
