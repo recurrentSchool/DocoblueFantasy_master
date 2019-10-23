@@ -25,7 +25,8 @@
 <a href="/docobluefantasy/index.jsp" class="top">TOPへ</a>
 </div>
 
-<hr>
-<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+<footer>
+	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+</footer>
 </body>
 </html>
