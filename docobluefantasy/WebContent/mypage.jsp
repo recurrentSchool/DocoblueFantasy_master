@@ -17,6 +17,15 @@
 
 
 <body>
+<header>
+<div align="left">
+<a href="/docobluefantasy/main.jsp"><input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50"></a>
+<a href="/docobluefantasy/weapon.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/weaponicon.png" width="100" height="50"></a>
+<a href="/docobluefantasy/character.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/charactericon.png" width="200" height="50"></a>
+<a href="/docobluefantasy/boss.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/bossicon.png" width="100" height="50"></a>
+<a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/gachaicon.png" width="200" height="50"></a>
+</div>
+</header>
 
 <br>
 
@@ -25,12 +34,7 @@
 <hr>
 </div>
 
-<header>
-<div align="center">
-<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
-</div>
-</header>
-
+<br>
 	<table>
 			<tr>
 				<th>ユーザー名</th>
@@ -48,7 +52,7 @@
 		<br>
 <div align="center">
 			<form action="/docobluefantasy/ContentsServlet" method="post">
-			<input class="submit_button" type="submit" name="submit" value="ログアウト">
+			<input id="submit_button" type="submit" name="submit" value="ログアウト">
 			</form>
 		</div>
 <hr>
