@@ -18,7 +18,7 @@
 <a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/gachaicon.png" width="150" height="50"></a>
 </div>
 </header>
-<div align="center"><h2>キャラクター一覧</h2></div>
+<div align="center"><br><h2><font color="#FFFFFF">キャラクター一覧</font></h2><br></div>
 		<div align="center">
 		<table border="1">
 				<tr>
