@@ -47,7 +47,7 @@
 		</table>
 		<br>
 		<div align="center">
-		<a href="/docobluefantasy/main.jsp"><b><font size="3" color="#0000CC">戻る</font></b></a>
+		<a href="/docobluefantasy/main.jsp"><b><font size="1" color="#0000CC">戻る</font></b></a>
 		</div>
 		<br>
 <div align="center">
