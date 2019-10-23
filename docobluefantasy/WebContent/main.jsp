@@ -48,16 +48,24 @@
 </tr>
 </table>
 <a class="twitter-timeline" data-width="400" data-height="500" data-theme="white" href="https://twitter.com/granbluefantasy?ref_src=twsrc%5Etfw">Tweets by granbluefantasy</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<hr>
-<div align="right">
+<footer>
 <form action="/docobluefantasy/ContentsServlet" method="post">
 <input class="submit_button" type="submit" value="ログアウト">
 </form>
-</div>
-<footer>
+<br>
+<table>
+<tr>
+<th><a href="/docobluefantasy/weapon.jsp">武器一覧　</a></th>
+<th>  </th>
+<th><a href="/docobluefantasy/character.jsp">キャラ一覧　</a></th>
+<th>  </th>
+<th><a href="/docobluefantasy/boss.jsp">ボス一覧　</a></th>
+<th>  </th>
+<th><a href="/docobluefantasy/gacha.jsp">ガチャシュミレーター</a></th>
+</tr>
+</table>
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </footer>
 </div>
-<hr>
 </body>
 </html>
