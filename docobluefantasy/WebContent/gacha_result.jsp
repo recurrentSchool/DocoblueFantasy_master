@@ -21,10 +21,11 @@
 <a href="/docobluefantasy/weapon.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/weaponicon.png" width="200" height="50"></a>
 <a href="/docobluefantasy/character.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/charactericon.png" width="200" height="50"></a>
 <a href="/docobluefantasy/boss.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/bossicon.png" width="100" height="50"></a>
-<a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/gachaicon.png" width="200" height="50"></a>
+<a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/gachaicon.png" width="150" height="50"></a>
 </div>
 </header>
 <div align="center">
+<br>
 <table align = center border="1" width="500" height="300">
 <th>名前</th>
 <th>攻撃力</th>
@@ -85,5 +86,23 @@
 <p><a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/regacha.png"></a></p><br>
 <p><a href="/docobluefantasy/main.jsp">メインページに戻る</a></p>
 </div>
-</body>
+<br>
+<div align="center">
+<footer>
+<br>
+<table>
+<tr>
+<th><a href="/docobluefantasy/weapon.jsp">武器一覧　</a></th>
+<th>  </th>
+<th><a href="/docobluefantasy/character.jsp">キャラ一覧　</a></th>
+<th>  </th>
+<th><a href="/docobluefantasy/boss.jsp">ボス一覧　</a></th>
+<th>  </th>
+<th><a href="/docobluefantasy/gacha.jsp">ガチャシュミレーター</a></th>
+</tr>
+</table>
+<br>
+	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+</footer>
+</div>
 </html>

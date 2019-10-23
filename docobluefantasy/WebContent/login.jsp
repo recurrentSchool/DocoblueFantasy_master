@@ -16,6 +16,11 @@
 <a href="/docobluefantasy/index.jsp"><input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50"></a>
 </div>
 </header>
+
+<div align="center">
+<img src="${pageContext.request.contextPath}/image/character/login_bi.png" width="300" height="200" alt="login画像">
+</div>
+
 <br>
 	<%
 		if (message != null) {
@@ -40,10 +45,13 @@
 		<input type="submit" value="ログイン">
 	</form>
 	<br>
+	<br>
 	<p>ホーム画面に戻るには「戻る」を</p>
 	<br>
+	<br>
 	<a href="/docobluefantasy/index.jsp">戻る</a>
-<br>
+	<br>
+	<br>
 
 <footer>
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>

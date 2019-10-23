@@ -23,6 +23,12 @@ main {
     overflow:  hidden;         /* floatで高さがなくなる問題解消 */
 }
 
+ header {
+background-color: #c0c0c0;
+opacity: 1.0;
+}
+
+
 .main_visual {
     text-align:  center;        /* 文字中央揃え */
     padding: 9px 0px 67px 108px;              /* 余白指定 */

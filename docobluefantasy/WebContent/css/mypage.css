@@ -5,6 +5,8 @@ table, td, th {
 	font-size: 110%;
 	height: 25px;		/* 高さ */
 	width: 300px;		/* 横幅 */
+	background-color: rgba(255,255,255,0.5);
+	color: #0000ff;
 	padding: auto;
 	margin: auto;
 	border: 5px #d1ffff solid;
@@ -16,7 +18,7 @@ table, td, th {
 input#submit_button {
     padding: 15px 40px;
     font-size: 1.2em;
-    background-color: #000;
-    color: #fff;
+    background-color: rgba(212,255,255,0.7);
+    color: #0000ff;
     border-style: none;
 }
