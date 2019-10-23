@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	String message =(String)request.getAttribute("message");
+%>
 <!DOCTYPE html>
 <html>
 
@@ -9,6 +12,7 @@
 <title>情報登録画面</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/message.css">
 </head>
 
 <body>
@@ -20,7 +24,15 @@
 	</div>
 	<hr>
 </header>
-
+<%
+	if (message != null) {
+%>
+	<div align="center" class="messagePage">
+	<p><%= message %></p>
+	</div>
+<%
+	}
+%>
 <div align="center">
 	<div id="boxDiv">
 		<h1>追加できる要素は、[武器]、[キャラクター]、[ボス]から1つのみです。</h1>
