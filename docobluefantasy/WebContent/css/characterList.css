@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-	background-image: url("/docobluefantasy/image/backGround/gacharesult.jpg");
+	background-image: url("/docobluefantasy/image/backGround/characterListBg.jpg");
 	background-position: top center;
 	background-size: cover;
 }
@@ -11,14 +11,10 @@ table {
 	border-color: #000000;
 	background-color: #FFFFFF;
 }
+
  header {
 background-color: #c0c0c0;
 opacity: 1.0;
-}
-
-header table {
-	border-collapse: collapse;
-	border-spacing: 0;
 }
 
 footer {
