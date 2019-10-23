@@ -39,7 +39,7 @@
 			</tr>
 			<tr>
 				<th bgcolor="#99CCFF">課金額</th>
-				<td><input type="text" name="billing" required></td>
+				<td><input type="text" name="billing" pattern="[1-9]|[1-9][0-9]{1,8}|1000000000" required></td>
 			</tr>
 			<tr>
 				<th bgcolor="#99CCFF">パスワード</th>

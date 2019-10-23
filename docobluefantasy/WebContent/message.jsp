@@ -18,12 +18,7 @@
 </div>
 </header>
 
-<div align="center">
-<p><font color="#FF0000"><%= message %></font></p>
-<p>TOPに戻るには「TOPへ」</p>
-<br>
-<a href="/docobluefantasy/index.jsp"><input id="top" type="image" src="${pageContext.request.contextPath}/image/icon/top.png"></a>
-<hr>
+<footer>
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
 </body>

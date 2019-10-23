@@ -2,6 +2,7 @@ package servlet;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -30,14 +31,26 @@ public class GachaServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("user");
 
-		GachaLogic gachalogic = new GachaLogic();
-		List<Weapon> listWeapon = gachalogic.executeGetWeapon(user);
+		String url = null;
 
-		request.setAttribute("listWeapon", listWeapon);
+		if(Objects.nonNull(user)) {
 
-		RequestDispatcher dis = request.getRequestDispatcher("/gacha_result.jsp");
+			GachaLogic gachalogic = new GachaLogic();
+			List<Weapon> listWeapon = gachalogic.executeGetWeapon(user);
+
+			request.setAttribute("listWeapon", listWeapon);
+
+			url = "/gacha_result.jsp";
+
+		} else {
+
+			request.setAttribute("message", "ログインしてください");
+			url = "/message.jsp";
+
+		}
+
+		RequestDispatcher dis = request.getRequestDispatcher(url);
 		dis.forward(request, response);
-
 
 	}
 

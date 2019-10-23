@@ -7,6 +7,7 @@
 <title>DOCOBLE FANTASY(仮) | ボスページ</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/button.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bossList.css">
 </head>
 <body>
 <header>
