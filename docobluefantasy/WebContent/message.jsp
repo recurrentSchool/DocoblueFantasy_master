@@ -18,7 +18,13 @@
 </header>
 
 <div align="center">
+<br>
+<br>
 <p><font color="#FF0000"><%= message %></font></p>
+<br>
+<img src="${pageContext.request.contextPath}/image/character/message_bi.png" width="200" height="175" alt="message画像">
+<br>
+<br>
 <p>TOPに戻るには「TOPへ」</p>
 <a href="/docobluefantasy/index.jsp">TOPへ</a>
 <hr>

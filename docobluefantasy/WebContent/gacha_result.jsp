@@ -25,6 +25,7 @@
 </div>
 </header>
 <div align="center">
+<br>
 <table align = center border="1" width="500" height="300">
 <th>名前</th>
 <th>攻撃力</th>
