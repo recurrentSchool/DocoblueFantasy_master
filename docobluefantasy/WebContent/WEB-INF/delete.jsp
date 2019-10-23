@@ -71,7 +71,7 @@
 	</div>
 </form>
 <hr>
-<p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
+<h5><font color="#000000">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
 </body>
 </html>
