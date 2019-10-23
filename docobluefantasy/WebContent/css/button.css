@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+input#image {
+	width: 105px;
+	height: 35px;
+}
+
+input#mainpage {
+	width: 180px;
+	height: 60px;
+}
+
+input#top {
+	width: 90px;
+	height: 30px;
+}
+
+input#registar {
+	width: 105px;
+	height: 35px;
+	margin: 0px 0px 0px 45px;
+}

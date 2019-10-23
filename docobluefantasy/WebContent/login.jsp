@@ -9,6 +9,7 @@
 <title>DOCOBLE FANTASY(仮)ログインページ</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/button.css">
 </head>
 <body>
 <header>
@@ -37,12 +38,12 @@
 			</tr>
 		</table>
 		<br>
-		<input type="submit" value="ログイン">
+		<a><input id="registar" type="image" src="${pageContext.request.contextPath}/image/icon/login.png"></a>
 	</form>
 	<br>
 	<p>ホーム画面に戻るには「戻る」を</p>
 	<br>
-	<a href="/docobluefantasy/index.jsp">戻る</a>
+	<a href="/docobluefantasy/index.jsp"><input id="image" type="image" src="${pageContext.request.contextPath}/image/icon/return.png" ></a>
 <br>
 
 <footer>

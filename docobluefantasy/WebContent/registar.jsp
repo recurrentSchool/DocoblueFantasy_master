@@ -9,7 +9,7 @@
 <title>DOCOBLE FANTASY(仮)会員登録ページ</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
-
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/button.css">
 
 <script type="text/javascript" src="JS/registar.js"></script>
 
@@ -49,12 +49,12 @@
 				<th bgcolor="#99CCFF" width="120" height="10">パスワード確認</th>
 				<td><input type="password" name="pass" id="pass2" maxlength="16" required></td>
 		</table>
-		<p><input type="submit" value="登録"></p>
+		<a><input id="registar" type="image" src="${pageContext.request.contextPath}/image/icon/legistar.png"></a>
 	</form>
 	<br>
 	<p>ホーム画面に戻るには「戻る」を</p>
 	<br>
-	<a href="/docobluefantasy/index.jsp">戻る</a>
+	<a href="/docobluefantasy/index.jsp"><input id="image" type="image" src="${pageContext.request.contextPath}/image/icon/return.png" ></a>
 <footer>
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </footer>

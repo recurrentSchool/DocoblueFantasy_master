@@ -13,6 +13,7 @@
 <title>ガチャ結果</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/gacharesult.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/button.css">
 </head>
 <body>
 <header>
@@ -83,7 +84,7 @@
 </div>
 <div align="center">
 <p><a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/regacha.png"></a></p><br>
-<p><a href="/docobluefantasy/main.jsp">メインページに戻る</a></p>
+<a href="/docobluefantasy/main.jsp"><input id="mainpage" type="image" src="${pageContext.request.contextPath}/image/icon/mainpage.png"></a>
 </div>
 </body>
 </html>

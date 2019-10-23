@@ -41,11 +41,7 @@
 
 		<br>
 		<div align="center">
-		<table border="1" bgcolor="#FFFFFF">
-		<tr>
-		<th><a href="/docobluefantasy/main.jsp"><input id="submit_button" type="button" value="戻る"></a></th>
-		</tr>
-		</table>
+		<a href="/docobluefantasy/main.jsp"><input id="image" type="image" src="${pageContext.request.contextPath}/image/icon/return.png" ></a>
 		</div>
 
 <hr>

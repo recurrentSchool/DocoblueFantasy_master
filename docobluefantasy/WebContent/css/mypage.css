@@ -22,3 +22,8 @@ input#submit_button {
     color: #0000ff;
     border-style: none;
 }
+
+input#image {
+	width: 104px;
+	height: 35px;
+}

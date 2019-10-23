@@ -7,6 +7,7 @@
 <title>DOCOBLE FANTASY(仮) | ガチャ画面</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/gacha.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/button.css">
 </head>
 <body>
 <header>
@@ -23,15 +24,11 @@
 <input type="image" src="${pageContext.request.contextPath}/image/gacha/gacha.gif"><br>
 <input type="image" src="${pageContext.request.contextPath}/image/gacha/gachaBTN.png" width="140" height="70">
 
-
-	<table border="1" bgcolor="#FFFFFF">
-		<tr>
-			<th><a href="/docobluefantasy/main.jsp"><font color="#0000CC">戻る</font></a></th>
-		</tr>
-	</table>
-
 </form>
+<br>
+<a href="/docobluefantasy/main.jsp"><input id="image" type="image" src="${pageContext.request.contextPath}/image/icon/return.png" ></a>
 </div>
+
 
 </body>
 </html>

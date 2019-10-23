@@ -6,10 +6,10 @@
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮) | 武器ページ</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/button.css">
 </head>
 <body>
 
-<div align="center">
 <header>
 <div align="left">
 <a href="/docobluefantasy/main.jsp"><input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50"></a>
@@ -37,11 +37,7 @@
 
 <br>
 		<div align="center">
-		<table border="1" bgcolor="#FFFFFF">
-		<tr>
-		<th><a href="/docobluefantasy/main.jsp"><font color="#0000CC">戻る</font></a></th>
-		</tr>
-		</table>
+<a href="/docobluefantasy/main.jsp"><input id="image" type="image" src="${pageContext.request.contextPath}/image/icon/return.png" ></a>
 
 		</div>
 
