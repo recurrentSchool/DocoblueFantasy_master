@@ -21,27 +21,22 @@
 <title>確認画面</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/confirmation.css">
 </head>
 <body>
 
 <br>
 
 <header>
-<div align="center">
-<h1>DOCOBLUEFANTASY攻略</h1>
-<hr>
-</div>
-
-<div align="center">
-<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
-</div>
+	<div align="center">
+		<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
+	</div>
+	<hr>
 </header>
 
 	<div align="center">
-		<h1>DOCOBLUEFANTASY攻略</h1>
-		<hr>
 
-		<p>この内容で上書きしますか？</p>
+		<p id="confirmationMsg">この内容で上書きしますか？</p>
 
 		<!-- update武器情報 -->
 		<% if(weaponOriginal != null) {%>
@@ -49,8 +44,10 @@
 			<input type="hidden" name="pageMove" value="executeFunction">
 			<input type="hidden" name="functionPage" value="update">
 
-			<h3>武器情報</h3>
 			<table border="1">
+				<tr>
+					<th colspan="3">上書き元の情報</th>
+				</tr>
 				<tr>
 					<th>武器名</th>
 				<td><%=weaponOriginal.getName()%><input type="hidden" name="weaponOriginalName" value=<%=weaponOriginal.getName()%>></td>
@@ -65,8 +62,10 @@
 				</tr>
 			</table>
 
-			<h3>上書き内容</h3>
 			<table border="1">
+				<tr>
+					<th colspan="3">上書き内容</th>
+				</tr>
 				<tr>
 					<th>武器名</th>
 				<td><%=weaponUpdate.getName()%><input type="hidden" name="weaponUpdateName" value=<%=weaponUpdate.getName()%>></td>
@@ -90,9 +89,11 @@
 			<input type="hidden" name="pageMove" value="executeFunction">
 			<input type="hidden" name="functionPage" value="update">
 
-			<h3>キャラクター情報</h3>
 			<table border="1">
-			<tr>
+				<tr>
+					<th colspan="3">上書き元の情報</th>
+				</tr>
+				<tr>
 					<th>キャラクター名</th>
 				<td><%=characterOriginal.getName()%><input type="hidden" name="characterOriginalName" value=<%=characterOriginal.getName()%>></td>
 				</tr>
@@ -118,8 +119,10 @@
 				</tr>
 			</table>
 
-			<h3>上書き内容</h3>
 			<table border="1">
+				<tr>
+					<th colspan="3">上書き内容</th>
+				</tr>
 				<tr>
 					<th>キャラクター名</th>
 				<td><%=characterUpdate.getName()%><input type="hidden" name="characterUpdateName" value=<%=characterUpdate.getName()%>></td>
@@ -155,8 +158,10 @@
 			<input type="hidden" name="pageMove" value="executeFunction">
 			<input type="hidden" name="functionPage" value="update">
 
-			<h3>ボス情報</h3>
 			<table border="1">
+				<tr>
+					<th colspan="3">上書き元の情報</th>
+				</tr>
 				<tr>
 					<th>ボス名</th>
 				<td><%=bossOriginal.getName()%><input type="hidden" name="bossOriginalName" value=<%=bossOriginal.getName()%>></td>
@@ -175,8 +180,10 @@
 				</tr>
 			</table>
 
-			<h3>上書き内容</h3>
 			<table border="1">
+				<tr>
+					<th colspan="3">上書き内容</th>
+				</tr>
 				<tr>
 					<th>ボス名</th>
 				<td><%=bossUpdate.getName()%><input type="hidden" name="bossUpdateName" value=<%=bossUpdate.getName()%>></td>
@@ -203,7 +210,7 @@
 			value="キャンセル">
 
 		<hr>
-		<p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
+	<h5><font color="#000000">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 	</div>
 
 </body>

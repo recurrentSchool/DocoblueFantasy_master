@@ -10,6 +10,7 @@
 <title>DOCOBLE FANTASY(仮)管理者ページ</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin_index.css">
 </head>
 <body>
 <br>
@@ -31,11 +32,12 @@
 	%>
 
 <form action="/docobluefantasy/AdminFunctionServlet" method="post">
-	<input type="submit" name="adminPage" value="情報登録">
-	<br>
-	<input type="submit" name="adminPage" value="情報削除">
-	<br>
-	<input type="submit" name="adminPage" value="情報更新">
+	<input type="submit" name="adminPage" value="情報登録" class="entry_submit">
+	<div class="text style entry">情報登録</div>
+	<input type="submit" name="adminPage" value="情報削除" class="delete_submit">
+	<div class="text style delete">情報削除</div>
+	<input type="submit" name="adminPage" value="情報更新" class="update_submit">
+	<div class="text style update">情報更新</div>
 </form>
 
 <br>
