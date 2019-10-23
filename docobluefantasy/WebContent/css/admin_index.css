@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+input[type="submit"] {
+	margin: 10px;
+	width: 185px;
+	height: 120px;
+	font-size: 20px;
+	-webkit-filter: blur(3px);
+	filter: blur(3px);
+}
+
+input[type="submit"].entry_submit {
+	background: url(/docobluefantasy/image/icon/entry_contents.png) no-repeat 0 0;
+}
+
+input[type="submit"].delete_submit {
+	background: url(/docobluefantasy/image/icon/delete_contents.png) no-repeat 0 0;
+}
+
+input[type="submit"].update_submit {
+	background: url(/docobluefantasy/image/icon/update_contents.png) no-repeat 0 0;
+}
+
+input[type="submit"]:hover {
+	transform: translateY(3px);
+	box-shadow: 0 0 0 #047c71, 0 0 0 rgba(0,0,0,.2);
+	transition: color .3s, background.3s, box-shadow .3s, transform .3s;
+}
+
+.text {
+  z-index: 1;
+}
+
+.text.style {
+  position: absolute;/*絶対配置*/
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 16px #000000, 0 0 16px #000000;
+}
+
+.text.style.entry {
+  top: 250px;
+  left: 426px;
+}
+
+.text.style.delete {
+  top: 250px;
+  left: 632px;
+}
+
+.text.style.update {
+  top: 250px;
+  left: 846px;
+}

@@ -17,24 +17,21 @@
 <title>確認画面</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/confirmation.css">
 </head>
 <body>
 
 <br>
 
 <header>
-<div align="center">
-<h1>DOCOBLUEFANTASY攻略</h1>
-<hr>
-</div>
-
-<div align="center">
-<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
-</div>
+	<div align="center">
+		<input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="600" height="150">
+	</div>
+	<hr>
 </header>
 
 	<div align="center">
-		<p>この内容で間違いありませんか？</p>
+		<p id="confirmationMsg">このデータを削除しますか？</p>
 
 		<!-- delete武器情報 -->
 		<% if(weapon != null) {%>
@@ -121,12 +118,14 @@
 		</form>
 		<% } %>
 
-		<input type="button"
-			onclick="location.href='/docobluefantasy/AdminFunctionServlet'"
-			value="キャンセル">
+	<br>
 
-<hr>
-<p>Copyright ドコウィズ攻略班 All Rights Reseved.</p>
-</div>
+	<input type="button"
+		onclick="location.href='/docobluefantasy/AdminFunctionServlet'"
+		value="キャンセル">
+
+	<hr>
+	<h5><font color="#000000">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+	</div>
 </body>
 </html>
