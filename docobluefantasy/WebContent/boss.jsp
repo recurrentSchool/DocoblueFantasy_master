@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>DOCOBLE FANTASY(仮) | ボスページ</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/button.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bossList.css">
 </head>
 <body>
@@ -15,10 +16,10 @@
 <a href="/docobluefantasy/weapon.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/weaponicon.png" width="200" height="50"></a>
 <a href="/docobluefantasy/character.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/charactericon.png" width="200" height="50"></a>
 <a href="/docobluefantasy/boss.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/bossicon.png" width="100" height="50"></a>
-<a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/gachaicon.png" width="150" height="50"></a>
+<a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/gachaicon.png" width="200" height="50"></a>
 </div>
 </header>
-<div align="center"><br><h2><font color="#FFFFFF">ボス一覧</font></h2><br></div>
+<div align="center"><h2>ボス一覧</h2></div>
 		<div align="center">
 		<table border="1">
 				<tr>
@@ -41,31 +42,13 @@
 
 		<br>
 		<div align="center">
-		<table border="1" bgcolor="#FFFFFF">
-		<tr>
-		<th><a href="/docobluefantasy/main.jsp"><font color="#0000CC">戻る</font></a></th>
-		</tr>
-		</table>
+		<a href="/docobluefantasy/main.jsp"><input id="image" type="image" src="${pageContext.request.contextPath}/image/icon/return.png" ></a>
 		</div>
-		<br>
-<div align="center">
-<footer>
-<br>
-<table>
-<tr>
-<th><a href="/docobluefantasy/weapon.jsp">武器一覧　</a></th>
-<th>  </th>
-<th><a href="/docobluefantasy/character.jsp">キャラ一覧　</a></th>
-<th>  </th>
-<th><a href="/docobluefantasy/boss.jsp">ボス一覧　</a></th>
-<th>  </th>
-<th><a href="/docobluefantasy/gacha.jsp">ガチャシュミレーター</a></th>
-</tr>
-</table>
-<br>
-	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 
-</footer>
+<hr>
+<div align="center">
+<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </div>
+
 </body>
 </html>

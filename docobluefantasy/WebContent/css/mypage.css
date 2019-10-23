@@ -16,9 +16,14 @@ table, td, th {
 }
 
 input#submit_button {
-    padding: 15px 40px;
-    font-size: 1.2em;
+    padding: 0.375px 1px;
+    font-size: 1em;
     background-color: rgba(212,255,255,0.7);
     color: #0000ff;
     border-style: none;
+}
+
+input#image {
+	width: 104px;
+	height: 35px;
 }

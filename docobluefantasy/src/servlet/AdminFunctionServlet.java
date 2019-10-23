@@ -60,7 +60,9 @@ public class AdminFunctionServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
+
 		try {
+
 			HttpSession session = request.getSession();
 
 			String adminPage = (String) request.getParameter("adminPage");
@@ -154,6 +156,8 @@ public class AdminFunctionServlet extends HttpServlet {
 				String bossHp = (String) request.getParameter("bossHp");
 				String bossSpecialAttack = (String) request.getParameter("bossSpecialAttack");
 
+				boolean confirmation = false;
+
 				//登録時確認画面表示用処理
 				if (functionPage.equals("entry")) {
 
@@ -164,6 +168,8 @@ public class AdminFunctionServlet extends HttpServlet {
 
 						Weapon weapon = new Weapon(weaponName, weaponAttackInteger, weaponSkill);
 						request.setAttribute("weapon", weapon);
+
+						confirmation = true;
 
 						//キャラクター情報が全て書かれている時
 					} else if (!characterName.isEmpty() && !characterRarity.isEmpty() && !characterAttack.isEmpty()
@@ -178,6 +184,7 @@ public class AdminFunctionServlet extends HttpServlet {
 								characterSkill, characterEvaluationInteger);
 
 						request.setAttribute("character", character);
+						confirmation = true;
 
 						//ボス情報が全て書かれている時
 					} else if (!bossName.isEmpty() && !bossAttack.isEmpty() && !bossHp.isEmpty()
@@ -189,10 +196,24 @@ public class AdminFunctionServlet extends HttpServlet {
 						Boss boss = new Boss(bossName, bossAttackInteger, bossHpInteger, bossSpecialAttack);
 
 						request.setAttribute("boss", boss);
+						confirmation = true;
+
+					} else {
+
+						message = "不適切なパラメーターが渡されました。<br>登録出来るのは1つのみです。";
+						request.setAttribute("message", message);
 
 					}
 
-					url = "/WEB-INF/confirmation_entry.jsp";
+					if (confirmation) {
+
+						url = "/WEB-INF/confirmation_entry.jsp";
+
+					} else {
+
+						url = "/WEB-INF/entry.jsp";
+
+					}
 
 					//削除時確認画面表示用処理
 				} else if (functionPage.equals("delete")) {

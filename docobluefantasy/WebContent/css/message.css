@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+h5{
+	text-align: center;
+}
+
+.messagePage {
+	background-color: #FFF;
+	border: 1px solid #E5E5E5;
+	padding: 20px;
+	border-radius: 2px;
+	width: 380px;
+	margin: 20px auto;
+}
+
+p {
+	margin: 30px;
+	color: red;
+}
+
+a.top {
+	padding: 10px;
+	margin-top: 10px;
+	text-align: center;
+	display: inline-block;
+	background-color: #FFF;
+	color: #448acb;
+	border-radius: 2px;
+	border: 1px solid #448acb;
+}
+
+a.top:hover {
+	color: #FFF;
+	background-color: #448acb;
+}

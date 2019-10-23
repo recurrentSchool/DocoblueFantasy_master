@@ -7,6 +7,7 @@
 <title>DOCOBLE FANTASY(仮) | ガチャ画面</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/gacha.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/button.css">
 </head>
 <body>
 <header>
@@ -15,7 +16,7 @@
 <a href="/docobluefantasy/weapon.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/weaponicon.png" width="200" height="50"></a>
 <a href="/docobluefantasy/character.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/charactericon.png" width="200" height="50"></a>
 <a href="/docobluefantasy/boss.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/bossicon.png" width="100" height="50"></a>
-<a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/gachaicon.png" width="150" height="50"></a>
+<a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/gachaicon.png" width="200" height="50"></a>
 </div>
 </header>
 <div align="center">
@@ -23,16 +24,9 @@
 <input type="image" src="${pageContext.request.contextPath}/image/gacha/gacha.gif"><br>
 <input type="image" src="${pageContext.request.contextPath}/image/gacha/gachaBTN.png" width="140" height="70">
 
-
-	<table border="1" bgcolor="#FFFFFF">
-		<tr>
-			<th><a href="/docobluefantasy/main.jsp"><font color="#0000CC">戻る</font></a></th>
-		</tr>
-	</table>
-
-	<br>
-
 </form>
+<br>
+<a href="/docobluefantasy/main.jsp"><input id="image" type="image" src="${pageContext.request.contextPath}/image/icon/return.png" ></a>
 </div>
 <div align="center">
 <footer>
@@ -52,5 +46,6 @@
 	<h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </footer>
 </div>
+
 </body>
 </html>

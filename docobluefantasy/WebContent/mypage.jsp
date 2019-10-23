@@ -47,12 +47,9 @@
 		</table>
 		<br>
 		<div align="center">
-		<a href="/docobluefantasy/main.jsp"><b><font size="3" color="#0000CC">戻る</font></b></a>
-		</div>
-		<br>
-<div align="center">
+			<a href="/docobluefantasy/main.jsp"><input id="image" type="image" src="${pageContext.request.contextPath}/image/icon/return.png" ></a>
 			<form action="/docobluefantasy/ContentsServlet" method="post">
-			<input id="submit_button" type="submit" name="submit" value="ログアウト">
+			<a><input id="image" type="image" src="${pageContext.request.contextPath}/image/icon/back.png"></a>
 			</form>
 		</div>
 <hr>
