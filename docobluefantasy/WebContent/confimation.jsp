@@ -44,10 +44,9 @@
 </p>
 </div>
 </form>
-<hr>
-
-
+<footer>
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+</footer>
 </div>
 </body>
 </html>
