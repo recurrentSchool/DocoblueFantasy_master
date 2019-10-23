@@ -7,6 +7,12 @@ body {
 	background-size: cover;
 }
 
+ header {
+background-color: #c0c0c0;
+opacity: 1.0;
+}
+
+
 .boss {
 	border: 1px #fff8dc solid;
 	font-size: 125%;
@@ -55,14 +61,8 @@ main {
     text-align:  center;
 }
 
-.header {
-	background-color: #fff;
-	height: 12.5px;
-	padding: 6px;
-}
 
 .image{
 	margin-right:260px;
 	padding: 50px 0px 0px 0px;
 }
-
