@@ -23,6 +23,9 @@
 </header>
 <br>
 <div align="center">
+
+<img src="${pageContext.request.contextPath}/image/character/oira_bi.png" width="200" height="200" alt="registar画像">
+
 <%
 	if(message != null){
 %>
