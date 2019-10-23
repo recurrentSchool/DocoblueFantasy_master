@@ -49,15 +49,15 @@
 	<br>
 	<p>ホーム画面に戻るには「戻る」を</p>
 	<br>
-<<<<<<< HEAD
+
 	<a href="/docobluefantasy/index.jsp"><input id="image" type="image" src="${pageContext.request.contextPath}/image/icon/return.png" ></a>
 <br>
-=======
+
 	<br>
-	<a href="/docobluefantasy/index.jsp">戻る</a>
+
 	<br>
 	<br>
->>>>>>> branch 'master' of https://github.com/recurrentSchool/DocoblueFantasy_master
+
 
 <footer>
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
