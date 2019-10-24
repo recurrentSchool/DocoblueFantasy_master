@@ -8,16 +8,13 @@
 <title>DOCOBLE FANTASY(仮) | メインページ</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/error.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/message.css">
 </head>
 <body>
 
 <header>
 <div align="left">
-<a href="/docobluefantasy/main.jsp"><input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50"></a>
-<a href="/docobluefantasy/weapon.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/weaponicon.png" width="100" height="50"></a>
-<a href="/docobluefantasy/character.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/charactericon.png" width="200" height="50"></a>
-<a href="/docobluefantasy/boss.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/bossicon.png" width="100" height="50"></a>
-<a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/gachaicon.png" width="200" height="50"></a>
+<a href="/docobluefantasy/index.jsp"><input type="image" src="${pageContext.request.contextPath}/image/siteLogo/POPUTE.png" width="200" height="50"></a>
 </div>
 </header>
 <div align="right">
@@ -36,7 +33,7 @@
    var output = "<img src=" + imglist[selectnum] + " width='200'/>";
 </script>
 
-	<div align="center">
+	<div align="center" class="messagePage">
 
 	<p><font size="7">500 Server Error</font></p>
 	<br>
@@ -50,14 +47,10 @@
 
 	</div>
 
-<hr>
-
 <div align="center">
 <footer>
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </footer>
 </div>
-
-<hr>
 </body>
 </html>

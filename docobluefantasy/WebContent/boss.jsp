@@ -19,7 +19,7 @@
 <a href="/docobluefantasy/gacha.jsp"><input type="image" src="${pageContext.request.contextPath}/image/icon/gachaicon.png" width="200" height="50"></a>
 </div>
 </header>
-<div align="center"><h2>ボス一覧</h2></div>
+<div align="center"><br><h2><font color="#FFFFFF">ボス一覧</font></h2></div><br>
 		<div align="center">
 		<table border="1">
 				<tr>

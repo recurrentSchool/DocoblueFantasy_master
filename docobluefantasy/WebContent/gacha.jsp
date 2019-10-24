@@ -20,6 +20,9 @@
 </div>
 </header>
 <div align="center">
+
+<br>
+
 <form action="/docobluefantasy/GachaServlet" method="post">
 <input type="image" src="${pageContext.request.contextPath}/image/gacha/gacha.gif"><br>
 <input type="image" src="${pageContext.request.contextPath}/image/gacha/gachaBTN.png" width="140" height="70">
@@ -27,6 +30,7 @@
 </form>
 <br>
 <a href="/docobluefantasy/main.jsp"><input id="image" type="image" src="${pageContext.request.contextPath}/image/icon/return.png" ></a>
+<br>
 </div>
 <div align="center">
 <footer>
