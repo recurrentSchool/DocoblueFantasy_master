@@ -13,10 +13,14 @@ public class LoginLogic {
 		UserDAO userDAO = new UserDAO();
 
 		//ネームとパスが一致した時trueを返す
-		if(userDAO.matchNamePassDB(user)) {
+		if(user != null && userDAO.matchNamePassDB(user)) {
+
 			propriety = true;
+
 		} else {
+
 			propriety = false;
+
 		}
 
 		return propriety;
