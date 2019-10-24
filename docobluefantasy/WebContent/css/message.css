@@ -6,10 +6,10 @@ h5{
 
 .messagePage {
 	background-color: #FFF;
-	border: 1px solid #E5E5E5;
+	border: 2px solid #E5E5E5;
 	padding: 20px;
 	border-radius: 2px;
-	width: 380px;
+	width: 52%;
 	margin: 20px auto;
 }
 
