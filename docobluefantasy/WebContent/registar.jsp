@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/button.css">
 
-<script type="text/javascript" src="JS/registar.js"></script>
+<script type="text/javascript" src="js/registar.js"></script>
 
 </head>
 
