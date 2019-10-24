@@ -11,13 +11,9 @@ body {
 }
 
 .example {
-<<<<<<< HEAD
-  position: relative; top:60px
-  }
-=======
   position: relative;
+  top:60px
  }
->>>>>>> branch 'master' of https://github.com/recurrentSchool/DocoblueFantasy_master
 
 .example a {/*aタグを画像の真ん中に*/
   position: absolute;
