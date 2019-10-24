@@ -27,7 +27,11 @@
 </form>
 <br>
 <a href="/docobluefantasy/main.jsp"><input id="image" type="image" src="${pageContext.request.contextPath}/image/icon/return.png" ></a>
+
+<br>
+
 </div>
+
 <div align="center">
 <footer>
 <br>

@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 body {
+	padding-bottom: 110px;
+	position: relative;
 	background-image: url("/docobluefantasy/image/backGround/kabegami.png");
 	background-position: top center;
 	background-size: cover;
