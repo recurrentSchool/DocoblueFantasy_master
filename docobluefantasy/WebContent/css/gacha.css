@@ -17,6 +17,14 @@ footer {
 	position: fixed;
     bottom: 0;
     width: 100%;
-background-color:#FFFFFF;
+background-color:#c0c0c0;
 opacity: 1.0;
 }
+
+table {
+	border: 1;
+	border-color: #000000;
+	background-color: #FFFFFF;
+}
+
+

@@ -52,7 +52,7 @@
 <a><input id="image" type="image" src="${pageContext.request.contextPath}/image/icon/back.png"></a>
 </form>
 <br>
-<table>
+<table bgcolor="#c0c0c0">
 <tr>
 <th><a href="/docobluefantasy/weapon.jsp">武器一覧　</a></th>
 <th>  </th>
