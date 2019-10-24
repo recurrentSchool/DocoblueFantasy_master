@@ -270,7 +270,7 @@ public class AdminFunctionServlet extends HttpServlet {
 
 						} else {
 
-							message = "該当する武器はありません";
+							message = "該当するボスはありません";
 							url = "/WEB-INF/delete.jsp";
 
 						}
