@@ -20,3 +20,17 @@ input#registar {
 	height: 35px;
 	margin: 0px 0px 0px 45px;
 }
+
+input#yes {
+	width: 120px;
+	height: 40px;
+	position: absolute; left: 38%;
+/*	margin: 0px 100px 0px 0px; */
+}
+
+input#no {
+	width: 120px;
+	height: 40px;
+	position: absolute; right: 38%;
+/*	margin: 20px 0px 0px 50px; */
+}

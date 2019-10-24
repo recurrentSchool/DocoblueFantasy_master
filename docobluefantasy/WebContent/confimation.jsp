@@ -10,6 +10,8 @@
 <title>DOCOBLE FANTASY(仮)確認ページ</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/confirmation.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/button.css">
 </head>
 <body>
 <header>
@@ -20,9 +22,13 @@
 
 <br>
 <div align="center">
+<b>
+この内容でよろしければ「はい」を<br>
+やめるならば「いいえ」をクリックしてください。
+</b>
 <table>
 <tr>
-<th>名前は</th>
+<th>名前</th>
 <td><%= user.getName()%></td>
 </tr>
 <tr>
@@ -35,15 +41,9 @@
 </tr>
 </table>
 <form action="/docobluefantasy/RegisterServlet" method="GET">
-<input type="submit" value="はい">
-
-<p>
-<div align="right">
-<p>
-	<a href="/docobluefantasy/register.jsp" >戻る</a>
-</p>
-</div>
+<a><input id="yes" type="image" src="${pageContext.request.contextPath}/image/icon/yes.png"></a>
 </form>
+<a href="/docobluefantasy/index.jsp"><input id="no" type="image" src="${pageContext.request.contextPath}/image/icon/no.png"></a>
 <footer>
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
 </footer>
