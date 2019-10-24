@@ -12,6 +12,13 @@ background-color: #c0c0c0;
 opacity: 1.0;
 }
 
+footer {
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+background-color:#FFFFFF;
+opacity: 1.0;
+}
 
 .boss {
 	border: 1px #fff8dc solid;

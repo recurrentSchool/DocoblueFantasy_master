@@ -10,6 +10,7 @@
 <title>メドゥーサ詳細</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/boss.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/button.css">
 </head>
 
 <body>
@@ -53,16 +54,36 @@
 		</table>
 </div>
 </div>
-<div align="center">
+<br>
+		<div align="center">
 		<table border="1" bgcolor="#FFFFFF">
 		<tr>
-		<th><a href="/docobluefantasy/boss.jsp"><font color="#0000CC">戻る</font></a></th>
+		<th><a href="/docobluefantasy/boss.jsp"><input id="image" type="image" src="${pageContext.request.contextPath}/image/icon/return.png" ></a></th>
 		</tr>
 		</table>
 		</div>
 		<br>
-<div class="footer">
+<div align="center">
+<footer>
+<br>
+<form action="/docobluefantasy/ContentsServlet" method="post">
+<a><input id="image" type="image" src="${pageContext.request.contextPath}/image/icon/back.png"></a>
+</form>
+<br>
+<table>
+<tr>
+<th><a href="/docobluefantasy/weapon.jsp">武器一覧　</a></th>
+<th>  </th>
+<th><a href="/docobluefantasy/character.jsp">キャラ一覧　</a></th>
+<th>  </th>
+<th><a href="/docobluefantasy/boss.jsp">ボス一覧　</a></th>
+<th>  </th>
+<th><a href="/docobluefantasy/gacha.jsp">ガチャシュミレーター</a></th>
+</tr>
+</table>
+<br>
 <h5><font color="#0000CC">Copyright ドコウィズ攻略班 All Rights Reseved.</font></h5>
+</footer>
 </div>
 </body>
 </html>
