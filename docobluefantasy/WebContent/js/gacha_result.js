@@ -1,6 +1,4 @@
-/**
- *
- */
+
 
 var exit_count = 0;
 var elems_count = 0;

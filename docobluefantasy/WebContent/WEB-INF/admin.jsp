@@ -23,13 +23,7 @@
 </header>
 
 	<div align="center">
-	<%
-		if (message != null) {
-	%>
-		<p> <%= message %> </p>
-	<%
-		}
-	%>
+
 
 <form action="/docobluefantasy/AdminFunctionServlet" method="post">
 	<input type="submit" name="adminPage" value="情報登録" class="entry_submit">
@@ -39,7 +33,13 @@
 	<input type="submit" name="adminPage" value="情報更新" class="update_submit">
 	<div class="text style update">情報更新</div>
 </form>
-
+	<%
+		if (message != null) {
+	%>
+		<p id="successMsg"> <%= message %> </p>
+	<%
+		}
+	%>
 <br>
 <table>
 <tr>
