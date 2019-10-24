@@ -20,9 +20,10 @@ opacity: 1.0;
 }
 
 footer {
+	table-color:#c0c0c0;
 	position: fixed;
     bottom: 0;
     width: 100%;
-background-color:#FFFFFF;
+background-color:#c0c0c0;
 opacity: 1.0;
 }

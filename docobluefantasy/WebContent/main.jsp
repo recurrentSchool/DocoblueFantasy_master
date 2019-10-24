@@ -48,6 +48,8 @@
 <th bgcolor="#FFFFFF"><font face="arial black">ガチャシュミレーター</font></th>
 </tr>
 </table>
+<br>
+<br>
 <a class="twitter-timeline" data-width="400" data-height="500" data-theme="white" href="https://twitter.com/granbluefantasy?ref_src=twsrc%5Etfw">Tweets by granbluefantasy</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <footer>
 <br>
@@ -55,7 +57,7 @@
 <a><input id="image" type="image" src="${pageContext.request.contextPath}/image/icon/back.png"></a>
 </form>
 <br>
-<table>
+<table bgcolor="#ffffff">
 <tr>
 <th><a href="/docobluefantasy/weapon.jsp">武器一覧　</a></th>
 <th>  </th>
