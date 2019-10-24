@@ -10,7 +10,7 @@ body {
 }
 
 .example {
-  position: relative;
+  position: relative; top:60px
   }
 
 .example a {/*aタグを画像の真ん中に*/
