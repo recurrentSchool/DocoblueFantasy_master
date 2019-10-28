@@ -40,6 +40,10 @@ public class GachaServlet extends HttpServlet {
 
 			request.setAttribute("listWeapon", listWeapon);
 
+			User user3000 = new User(user.getAdmin(),user.getName(),user.getPass(),user.getBilling()+3000);
+
+			session.setAttribute("user", user3000);
+
 			url = "/gacha_result.jsp";
 
 		} else {
